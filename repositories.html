@@ -1,0 +1,2389 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Align To SDG · Repository atlas</title><style>
+:root{--paper:#f7f8f4;--ink:#203c36;--muted:#63766d;--line:#d6e0d8;--green:#2e705c;--blue:#486b8c;--ochre:#896c36;--purple:#716488}*{box-sizing:border-box}body{margin:0;background:var(--paper);font:14px/1.55 system-ui,-apple-system,sans-serif;color:var(--ink)}button,input,a{font:inherit}button,a{touch-action:manipulation}button{cursor:pointer}button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #b18c3c;outline-offset:3px}header{padding:20px 3vw 0;background:white;border-bottom:1px solid var(--line)}.brand{display:flex;justify-content:space-between;font-size:11px;letter-spacing:1.8px}.status{color:var(--ochre);letter-spacing:.6px}nav{display:flex;gap:25px;margin-top:14px}nav a{color:var(--muted);text-decoration:none;padding:12px 0;font-size:13px}nav a.active{color:var(--green);border-bottom:3px solid var(--green)}.hero{padding:25px 3vw 18px;display:flex;gap:30px;align-items:center;justify-content:space-between}.eyebrow{color:var(--green);font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase}h1{font:400 36px/1.15 Georgia,serif;margin:9px 0}h2{font:400 27px/1.2 Georgia,serif;margin:9px 0 15px}.hero p{color:var(--muted);max-width:740px;margin:10px 0 0}.metrics{display:flex;gap:24px;flex-shrink:0}.metric strong{font:400 29px Georgia,serif;display:block}.metric span{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.6px}.modebar{margin:0 3vw 18px;display:flex;gap:8px;flex-wrap:wrap}.mode{padding:11px 16px;border:1px solid var(--line);border-radius:8px;background:white;color:var(--muted);text-align:left}.mode strong{font-size:12px;display:block}.mode small{font-size:10px}.mode[aria-pressed=true]{background:var(--ink);border-color:var(--ink);color:white}.workspace{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px;margin:0 3vw 30px;align-items:start}.map,.inspector{border:1px solid var(--line);border-radius:12px;background:white;min-width:0}.map{padding:19px;position:sticky;top:16px;max-height:calc(100vh - 32px);overflow:auto;scrollbar-width:thin}.mapintro{display:flex;justify-content:space-between;gap:12px;align-items:center}.mapintro strong{font-size:13px}.subtle{font-size:11px;color:var(--muted)}input{width:100%;border:1px solid var(--line);border-radius:6px;padding:10px 12px;margin-top:13px;background:#fbfcfa;color:var(--ink)}.summary{font-size:12px;color:var(--muted);border-left:2px solid #a3bba9;padding-left:12px;margin:17px 0}.group{padding:12px 0;border-top:1px solid #edf0eb}.gtitle{display:flex;justify-content:space-between;color:var(--muted);font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px}.nodes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.node{display:flex;align-items:center;text-align:left;gap:9px;background:white;border:1px solid var(--line);border-radius:7px;padding:11px 10px;min-height:64px;color:var(--ink);transition:border-color 150ms ease,background 150ms ease}.node .icon{width:27px;height:27px;flex-shrink:0;display:flex;align-items:center;justify-content:center;border:1px solid #c9d5cc;border-radius:5px;color:var(--green);font:10px monospace}.node strong{font-size:12px;line-height:1.3;display:block}.node small{display:block;font-size:10px;color:var(--muted);margin-top:4px}.node[aria-pressed=true]{background:#edf4ef;border-color:var(--green);box-shadow:inset 3px 0 var(--green)}.node:hover{background:#f3f7f2;border-color:#769d88}.inspector{padding:24px}.pill{display:inline-block;border:1px solid var(--line);border-radius:5px;padding:3px 7px;font-size:10px;color:var(--muted);margin:0 5px 5px 0}.lead{font-size:14px;line-height:1.75}.why{padding:13px 15px;background:#f5f4ed;border-left:2px solid #b9a270;margin:17px 0;font-size:12px}.section{border-top:1px solid var(--line);padding:18px 0 0;margin-top:17px}.section h3{font-size:11px;letter-spacing:1.1px;text-transform:uppercase;margin:0 0 12px;color:var(--green)}.joins{display:grid;gap:9px}.join{border:1px solid var(--line);border-radius:7px;padding:12px}.jointype{font-size:9px;letter-spacing:.5px;text-transform:uppercase;color:var(--muted);margin-bottom:6px}.joinpath{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:12px}.entity{border:0;background:#eef3ef;color:var(--ink);padding:5px 7px;border-radius:4px;text-align:left;font-size:11px;font-weight:600}.rel{font:10px/1.5 ui-monospace,monospace;color:var(--blue);overflow-wrap:anywhere}.joinexample{font:10px/1.6 ui-monospace,monospace;margin:8px 0 0;color:var(--muted);overflow-wrap:anywhere}.count{font-size:10px;white-space:nowrap;color:var(--ochre)}.tabs{display:flex;gap:3px;flex-wrap:wrap;border-bottom:1px solid var(--line);margin-top:22px}.tabs button{border:0;background:none;padding:10px;color:var(--muted);font-size:12px}.tabs button[aria-pressed=true]{color:var(--green);box-shadow:inset 0 -2px var(--green)}.tabcontent{padding-top:15px}.schema{display:flex;flex-wrap:wrap;gap:5px}.field{font:10px/1.4 ui-monospace,monospace;padding:6px 8px;background:#f3f5f1;border:1px solid #e3e9e1;border-radius:4px;overflow-wrap:anywhere}.tablewrap{overflow:auto}table{width:100%;border-collapse:collapse;font-size:12px}td,th{text-align:left;vertical-align:top;padding:9px 7px;border-bottom:1px solid #e6ebe4;overflow-wrap:anywhere}th{font-weight:500;color:var(--muted);width:35%;font-size:10px}td{line-height:1.7}pre{white-space:pre-wrap;overflow-wrap:anywhere;font:11px/1.6 ui-monospace,monospace;background:#f5f7f3;padding:14px;border-radius:6px}.consumer{font-size:12px;line-height:1.6}.legend{margin-top:15px;font-size:10px;color:var(--muted);padding-top:12px;border-top:1px solid var(--line)}.facts{display:flex;gap:6px;flex-wrap:wrap}.trace{border:1px solid #d2e1d6;background:#f3f8f2;border-radius:8px;padding:12px;margin-top:14px}.trace button{border:0;color:var(--green);background:none;padding:0;text-align:left;font-size:12px;font-weight:600}.trace p{margin:6px 0;font-size:11px;color:var(--muted)}.empty{padding:24px;text-align:center;color:var(--muted)}footer{padding:0 3vw 25px;color:var(--muted);font-size:11px}.hash{font:10px/1.7 ui-monospace,monospace;overflow-wrap:anywhere}.floating{display:none}@media(max-width:900px){.hero{display:block}.metrics{margin-top:18px}.workspace{grid-template-columns:1fr}.map{position:static;max-height:none}.inspector{padding:18px}.hero h1{font-size:29px}.mode{flex:1}.floating{display:block;position:fixed;bottom:12px;right:12px;background:var(--ink);color:white;border:0;border-radius:20px;padding:9px 14px;font-size:12px;z-index:3}}@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+.network{overflow:auto;border:1px solid #dce5dc;border-radius:10px;background:#fbfcf9;padding:8px 0}.network svg{display:block;width:100%;min-width:520px;height:auto}.network .mapnode{cursor:pointer;outline:none}.network .mapnode:hover rect,.network .mapnode:focus rect{stroke:#97753a;stroke-width:2}.mapkey{font-size:10px;line-height:1.7;color:var(--muted)}.inventory{margin-top:17px}.inventory summary{font-size:12px;font-weight:600;cursor:pointer;padding:9px 0}.map{max-height:calc(100vh - 32px)}
+</style></head><body><header><div class="brand"><span>ALIGN TO SDG / SYSTEM ATLAS</span><span class="status">SEQ-19 · OPEN · REVIEW</span></div><nav aria-label="Main review tabs"><a href="index.html">01 · Educator → validated Kit</a><a class="active" aria-current="page" href="repositories.html">02 · Repositories & connections</a></nav></header><main><section class="hero"><div><div class="eyebrow">Current-source data architecture</div><h1>Many dimensions. One traceable decision.</h1><p>Explore how curriculum, technical meaning, sustainability, teaching design and saved evidence connect. Select a repository to follow its links and inspect real data.</p></div><div class="metrics"><div class="metric"><strong id="nodes"></strong><span>Canonical entities</span></div><div class="metric"><strong id="edges"></strong><span>Recorded links</span></div><div class="metric"><strong id="types"></strong><span>Relationship types</span></div></div></section><div class="modebar" aria-label="Data layer"><button class="mode" data-mode="knowledge"><strong>01 · Knowledge network</strong><small>19 canonical CSV sources</small></button><button class="mode" data-mode="kit"><strong>02 · Teaching & evidence</strong><small>Templates · material · framework rules</small></button><button class="mode" data-mode="runtime"><strong>03 · Runtime & saved records</strong><small>Compile · generate · persist · replay</small></button></div><div class="workspace"><section class="map" aria-label="Repository navigator"><div class="mapintro"><strong id="maptitle"></strong><span class="subtle" id="mapcount"></span></div><input id="search" type="search" placeholder="Find a repository, field or identifier column…" aria-label="Find a repository, field or identifier column"><p class="summary" id="summary"></p><div id="network" class="network" aria-label="Interactive data connection map"></div><p class="mapkey">Solid arrows: recorded graph relationships. Dashed arrows: table joins or runtime handoffs. Select a node to highlight its connections.</p><details class="inventory"><summary>Browse all sources as a list</summary><div id="catalog"></div></details><div class="trace"><button id="example">Follow a real topic-to-concept link →</button><p>Filtration topic → recorded concept. This is a repository example, not a newly executed recommendation.</p></div><div class="legend">Select a connection’s endpoint to travel between layers. Graph links show recorded direction. Table joins and runtime handoffs are labelled separately.</div></section><article class="inspector" id="detail" aria-live="polite"><div class="eyebrow" id="family"></div><h2 id="name"></h2><div class="facts" id="facts"></div><p class="lead" id="description"></p><div class="why" id="why"></div><div class="section"><h3>Who uses it?</h3><div class="consumer" id="consumer"></div></div><div class="section"><h3>Connections · select an endpoint to follow</h3><div id="joins" class="joins"></div></div><div class="tabs" aria-label="Repository inspection"><button data-pane="example">Real sample</button><button data-pane="schema">Fields & identifiers</button><button data-pane="status">Statuses</button><button data-pane="source">Source & integrity</button></div><div class="tabcontent" id="pane"></div></article></div></main><button class="floating" id="backmap">↑ Repositories</button><footer>Observed from current source files · 14 October 2026. Examples are partial unchanged records, not generated selections. Operational database contents and credentials are not accessed. No providers, core execution, compilation or repository edits. <a href="atlas-data.json" download>Download inspected inventory</a></footer><script>const DATA={
+  "items": [
+    {
+      "id": "01_course.csv",
+      "name": "Courses",
+      "layer": "knowledge",
+      "group": "Curriculum",
+      "description": "Identifies the course the educator teaches and its curriculum description, objectives and learning outcomes.",
+      "consumer": "Curriculum catalogue; request validation",
+      "count": 60,
+      "countLabel": "rows",
+      "headers": [
+        "course_id:ID",
+        "title",
+        "domain",
+        "discipline",
+        "description",
+        "objectives",
+        "learning_outcomes",
+        "course_type",
+        "level",
+        "status",
+        ":LABEL"
+      ],
+      "key": "course_id:ID",
+      "statuses": {
+        "status": {
+          "Active": 60
+        }
+      },
+      "sample": [
+        {
+          "course_id:ID": "COURSE_001",
+          "title": "Data Structures & Algorithms",
+          "domain": "Engineering & Technology",
+          "discipline": "Computer Science",
+          "description": "Introduces fundamental data structures and algorithms for representing, organizing, storing, retrieving, and processing data. The course covers linear and non-linear structures, searching, sorting, hashing, and analysis of algorithmic efficiency.",
+          "objectives": "Develop competence in selecting, implementing, analysing, and evaluating data structures and algorithms for computational problems, with emphasis on correctness, efficiency, data representation, and trade-offs.",
+          "learning_outcomes": "Implement common data structures and algorithms; analyse time and space requirements; select suitable structures and algorithms for stated problem requirements; compare alternative approaches; and evaluate correctness, efficiency, and implementation trade-offs.",
+          "course_type": "Core",
+          "level": "Suggested advanced undergraduate / postgraduate",
+          "status": "Active",
+          ":LABEL": "Course"
+        }
+      ],
+      "path": "data/repository/01_course.csv",
+      "sha": "60a642e40639821a41fa35cea151be029f51a9d82ebbdc319e048df3caeab43b",
+      "integrity": "Matches existing compiled manifest",
+      "why": "Keeps domain meaning and relationships explicit, inspectable and separate from generated teaching prose."
+    },
+    {
+      "id": "02_module.csv",
+      "name": "Modules",
+      "layer": "knowledge",
+      "group": "Curriculum",
+      "description": "Breaks each course into modules; containment is recorded as a directed relationship rather than inferred from names.",
+      "consumer": "Curriculum catalogue; hierarchy validation",
+      "count": 373,
+      "countLabel": "rows",
+      "headers": [
+        "module_id:ID",
+        "name",
+        "module_no",
+        "description",
+        "module_sd_id",
+        "status",
+        ":LABEL"
+      ],
+      "key": "module_id:ID",
+      "statuses": {
+        "status": {
+          "Active": 373
+        }
+      },
+      "sample": [
+        {
+          "module_id:ID": "MOD_COURSE_001_M01",
+          "name": "Foundations & Linear Data Structures",
+          "module_no": "1",
+          "description": "Foundations & Linear Data Structures examines Classes and Stacks within Data Structures & Algorithms. Key technical concerns include Abstraction, encapsulation, state and behaviour, modularity, information hiding, with emphasis on how the contained topics are represented, analysed, and applied within their stated assumptions.",
+          "module_sd_id": "MSD_FOUNDATIONS_LINEAR_DATA_STRUCTURES",
+          "status": "Active",
+          ":LABEL": "Module"
+        }
+      ],
+      "path": "data/repository/02_module.csv",
+      "sha": "8d5f776e31539bb1ef8219592e030249c65687420719ee0478e94add7df5d9e8",
+      "integrity": "Matches existing compiled manifest",
+      "why": "Keeps domain meaning and relationships explicit, inspectable and separate from generated teaching prose."
+    },
+    {
+      "id": "03_subtopic.csv",
+      "name": "Topics / subtopics",
+      "layer": "knowledge",
+      "group": "Curriculum",
+      "description": "Defines the selected technical topic. Its recorded scope stays authoritative through recommendation and Kit preparation.",
+      "consumer": "Topic profile; context discovery; recommendation input",
+      "count": 1338,
+      "countLabel": "rows",
+      "headers": [
+        "subtopic_id:ID",
+        "name",
+        "subtopic_no",
+        "description",
+        "subtopic_sd_id",
+        "review_status",
+        "status",
+        "version",
+        ":LABEL"
+      ],
+      "key": "subtopic_id:ID",
+      "statuses": {
+        "review_status": {
+          "Semantically_Audited": 1338
+        },
+        "status": {
+          "Active": 1338
+        }
+      },
+      "sample": [
+        {
+          "subtopic_id:ID": "SUB_COURSE_013_M02_S01",
+          "name": "Filtration",
+          "subtopic_no": "1",
+          "description": "Filtration refers to a water or wastewater treatment process that removes suspended or particulate matter by passing fluid through a porous filter medium. In Water Treatment, the focus is on media filtration, straining, adsorption contributions, head loss, backwashing and filtration performance.",
+          "subtopic_sd_id": "SSD_FILTRATION",
+          "review_status": "Semantically_Audited",
+          "status": "Active",
+          "version": "1.0",
+          ":LABEL": "Subtopic"
+        }
+      ],
+      "path": "data/repository/03_subtopic.csv",
+      "sha": "2ce73da30a9f1ee5e769545b9729391b3d6eeb567adccd4d759ae98fba73acfb",
+      "integrity": "Matches existing compiled manifest",
+      "why": "Keeps domain meaning and relationships explicit, inspectable and separate from generated teaching prose."
+    },
+    {
+      "id": "04_kcr.csv",
+      "name": "Knowledge concepts",
+      "layer": "knowledge",
+      "group": "Technical meaning",
+      "description": "Describes what is studied: concepts, definitions, scope, principles and semantic descriptions used as technical evidence.",
+      "consumer": "Topic profile; frozen Recommendation Core",
+      "count": 1267,
+      "countLabel": "rows",
+      "headers": [
+        "kcr_id:ID",
+        "name",
+        "domain",
+        "concept_category",
+        "concept_type",
+        "definition",
+        "scope",
+        "core_principles",
+        "semantic_description",
+        "keywords_synonyms",
+        "status",
+        ":LABEL"
+      ],
+      "key": "kcr_id:ID",
+      "statuses": {
+        "status": {
+          "Active": 1267
+        }
+      },
+      "sample": [
+        {
+          "kcr_id:ID": "KCR_000066",
+          "name": "Filtration",
+          "domain": "Engineering & Technology",
+          "concept_category": "Environmental Engineering",
+          "concept_type": "Method / Process",
+          "definition": "A water or wastewater treatment process that removes suspended or particulate matter by passing fluid through a porous filter medium.",
+          "scope": "Media filtration, straining, adsorption contributions, head loss, backwashing and filtration performance.",
+          "core_principles": "Particle removal; hydraulic resistance; treatment performance.",
+          "semantic_description": "Filtration separates particles through mechanisms including straining, interception and attachment. Performance depends on media, particle characteristics, loading and operating conditions.",
+          "keywords_synonyms": "Water treatment; particle removal; hydraulic resistance; treatment performance; Environmental Engineering",
+          "status": "Active",
+          ":LABEL": "KnowledgeConcept"
+        }
+      ],
+      "path": "data/repository/04_kcr.csv",
+      "sha": "26ed55dc83708508ca7949e5a488d9c55750203e7c564459c4725551adc2b0ef",
+      "integrity": "Matches existing compiled manifest",
+      "why": "Keeps domain meaning and relationships explicit, inspectable and separate from generated teaching prose."
+    },
+    {
+      "id": "05_kpr.csv",
+      "name": "Knowledge principles",
+      "layer": "knowledge",
+      "group": "Technical meaning",
+      "description": "Records explanatory principles and their applicability. Principles apply to concepts through explicit graph links.",
+      "consumer": "Technical evidence enrichment; Recommendation Core",
+      "count": 146,
+      "countLabel": "rows",
+      "headers": [
+        "kpr_id:ID",
+        "name",
+        "domain",
+        "discipline",
+        "principle_type",
+        "principle_granularity",
+        "definition",
+        "scope",
+        "core_ideas",
+        "semantic_description",
+        "keywords_synonyms",
+        "status",
+        ":LABEL"
+      ],
+      "key": "kpr_id:ID",
+      "statuses": {
+        "status": {
+          "Active": 136,
+          "Unlinked": 10
+        }
+      },
+      "sample": [
+        {
+          "kpr_id:ID": "KPR_000001",
+          "name": "Pigeonhole Principle",
+          "domain": "Engineering & Technology",
+          "discipline": "Computer Science; Discrete Mathematics",
+          "principle_type": "Principle",
+          "principle_granularity": "Atomic",
+          "definition": "A counting principle stating that if more objects are assigned to fewer containers, at least one container must contain more than one object.",
+          "scope": "Applies to finite counting and allocation arguments in which the number of objects exceeds the number of available categories or containers; it does not by itself identify which container contains the repeated objects.",
+          "core_ideas": "Counting; cardinality comparison; unavoidable repetition",
+          "semantic_description": "A foundational counting principle that converts a simple cardinality inequality into a guaranteed existence result. It is used in combinatorics, discrete mathematics, hashing arguments, and allocation reasoning.",
+          "keywords_synonyms": "Pigeonhole principle; Dirichlet principle; box principle",
+          "status": "Active",
+          ":LABEL": "KnowledgePrinciple"
+        }
+      ],
+      "path": "data/repository/05_kpr.csv",
+      "sha": "812650953bc4433136e502f19a7519754cb0349d4acb9ab758d36c63b3f6bedd",
+      "integrity": "Matches existing compiled manifest",
+      "why": "Keeps domain meaning and relationships explicit, inspectable and separate from generated teaching prose."
+    },
+    {
+      "id": "06_kfr.csv",
+      "name": "Knowledge functions",
+      "layer": "knowledge",
+      "group": "Technical meaning",
+      "description": "Records operational capabilities: purpose, inputs, outputs and how a function acts on concepts.",
+      "consumer": "Technical evidence enrichment; Recommendation Core",
+      "count": 136,
+      "countLabel": "rows",
+      "headers": [
+        "kfr_id:ID",
+        "name",
+        "domain",
+        "discipline",
+        "function_type",
+        "function_granularity",
+        "definition",
+        "scope",
+        "purpose",
+        "inputs",
+        "outputs",
+        "realization_or_mechanism",
+        "semantic_description",
+        "keywords_synonyms",
+        "status",
+        ":LABEL"
+      ],
+      "key": "kfr_id:ID",
+      "statuses": {
+        "status": {
+          "Active": 136
+        }
+      },
+      "sample": [
+        {
+          "kfr_id:ID": "KFR_000001",
+          "name": "Apply Pigeonhole Principle to Pigeonhole principle",
+          "domain": "Engineering & Technology",
+          "discipline": "Computer Science; Discrete Mathematics",
+          "function_type": "Analysis / Application",
+          "function_granularity": "Atomic",
+          "definition": "Operational capability to apply Pigeonhole Principle to Pigeonhole principle under the governing principle's stated assumptions and validity conditions.",
+          "scope": "Applies to finite counting and allocation arguments in which the number of objects exceeds the number of available categories or containers; it does not by itself identify which container contains the repeated objects.",
+          "purpose": "Use Pigeonhole Principle to obtain a technically justified analysis, calculation, classification, or decision concerning Pigeonhole principle.",
+          "inputs": "Problem data, variables, relationships, assumptions, and boundary conditions relevant to Pigeonhole principle.",
+          "outputs": "A principle-grounded analysis, calculation, classification, or decision concerning Pigeonhole principle.",
+          "realization_or_mechanism": "Verify the applicability conditions of Pigeonhole Principle, map the concept-specific variables and relationships to the principle, and derive only the conclusions permitted by that principle.",
+          "semantic_description": "Operationalizes Pigeonhole Principle for Pigeonhole principle. The function connects concept-specific evidence to a principle-grounded result within the stated scope and should not be generalized beyond the principle's assumptions.",
+          "keywords_synonyms": "Pigeonhole Principle; Pigeonhole principle",
+          "status": "Active",
+          ":LABEL": "KnowledgeFunction"
+        }
+      ],
+      "path": "data/repository/06_kfr.csv",
+      "sha": "aca90a112a018c393f2d709872e717334fa170cd04af92de7b1f140b8154cd33",
+      "integrity": "Matches existing compiled manifest",
+      "why": "Keeps domain meaning and relationships explicit, inspectable and separate from generated teaching prose."
+    },
+    {
+      "id": "07_scr.csv",
+      "name": "Sustainability concepts",
+      "layer": "knowledge",
+      "group": "Recommendation",
+      "description": "Defines candidate sustainability concepts. The engine ranks supported concepts using its existing semantic and graph rules; graph links alone are not a universal eligibility whitelist.",
+      "consumer": "Recommendation Core; saved result translation; teaching-template selection",
+      "count": 96,
+      "countLabel": "rows",
+      "headers": [
+        "scr_id:ID",
+        "name",
+        "sustainability_dimension",
+        "domain",
+        "definition",
+        "scope",
+        "core_ideas",
+        "semantic_description",
+        "keywords_synonyms",
+        "sustainability_principle",
+        "principle_origin",
+        "underlying_mechanism",
+        "derived_from_practice_or_system",
+        "evidence_status",
+        "implementation_maturity",
+        "transferability",
+        "boundary_conditions",
+        "recommendation_trigger",
+        "status",
+        ":LABEL"
+      ],
+      "key": "scr_id:ID",
+      "statuses": {
+        "evidence_status": {
+          "UN SDG 15; IPCC AR6 sustainability and resilience literature.": 1,
+          "UN SDG Goals 6, 12 and 14; FAO sustainability principles; IPCC AR6.": 1,
+          "Sustainable Pearls; UN SDG partnership material; marine ecosystem management literature.": 1,
+          "UNESCO traditional knowledge/irrigation documentation; FAO; UN SDG Goals 6 and 11.": 1,
+          "FAO; UNESCO traditional knowledge; UN SDG Goals 2, 6 and 14.": 1,
+          "UN SDG Goals 6 and 14; scholarly commons-governance evidence.": 1,
+          "IPCC AR6; UN SDG Goals 6, 11 and 15.": 1,
+          "UN SDG Goals 6 and 16; commons-governance scholarship.": 1,
+          "UN 2030 Agenda; UN SDG 12; UN SDG 13; KPR Intergenerational Equity Principle.": 1,
+          "UN SDG 12.3 and 12.2; UN SDG 6.4; UN SDG 9.1.": 1,
+          "UN SDG 12.4 and 12.5; UN SDG Indicator Framework.": 1,
+          "UN SDG 12; lifecycle and sustainable design literature.": 1,
+          "UN SDG 12; circular economy literature.": 1,
+          "UN SDG 12.2; engineering sustainability literature.": 1,
+          "UNESCO traditional water systems; sustainable building literature.": 1,
+          "Engineering resilience literature; UN SDG 9 and 11.": 1,
+          "UN SDG Goals 6, 11 and 15; nature-based solutions literature.": 1,
+          "UN SDG Goals 11 and 15; emerging nature-positive design literature.": 1,
+          "IPCC AR6; UN SDG Goals 6, 13 and 15.": 1,
+          "UN SDG 12; UN SDG 10; IPCC lifecycle and equity literature.": 1,
+          "UN SDG Goal 10; UN 2030 Agenda; IPCC AR6 equity literature.": 1,
+          "UN SDG Goals 3, 4 and 10; UN 2030 Agenda.": 1,
+          "UN SDG Goal 3; UN SDG Goal 8; IPCC risk-management literature.": 1,
+          "UN SDG Goals 3, 5 and 10; human-development literature.": 1,
+          "UN SDG Goal 16; social-science evidence.": 1,
+          "UN SDG Goals 6, 10 and 16.": 1,
+          "UNESCO; FAO; IPCC recognition of Indigenous and local knowledge.": 1,
+          "Case-based sustainability transition literature; UNESCO/FAO documentation.": 1,
+          "IPCC AR6; UN SDG 13; adaptive-management literature.": 1,
+          "UN Rio/precautionary principle; UN SDG environmental governance; IPCC risk literature.": 1,
+          "UN SDG Goal 12; industrial ecology literature.": 1,
+          "Sustainable design and resilience literature; UN SDG 9.": 1,
+          "UN SDG 12; measurement and systems literature.": 1,
+          "UN SDG Goals 9, 10 and 4.7; emerging technology literature.": 1,
+          "UN SDG Goals 9, 11 and 13; UN SDG indicator metadata; AI/sustainability literature.": 1,
+          "IPCC AR6; UN SDG 13.": 1,
+          "Emerging nature-positive and circular-design literature.": 1,
+          "Research-methods evidence; UNESCO/FAO/IPCC cross-knowledge discussions.": 1,
+          "IPCC AR6; UN SDG Goals 11, 13 and 15.": 1,
+          "UN 2030 Agenda; UN SDG Goals 3, 4, 10 and 15; UNDP human-development tradition.": 1,
+          "Established evidence base": 20,
+          "Established": 30,
+          "Direct UN SDG target and action evidence": 2,
+          "Direct UN SDG action evidence": 1,
+          "Direct UN SDG action and target evidence": 1,
+          "Direct UN SDG target evidence": 2
+        },
+        "status": {
+          "Active": 95,
+          "Deprecated — merged into SCR_0090": 1
+        }
+      },
+      "sample": [
+        {
+          "scr_id:ID": "SCR_0001",
+          "name": "Functional Diversity and Adaptive Capacity",
+          "sustainability_dimension": "PEOPLE; ECOLOGY; FUTURE_GENERATIONS",
+          "domain": "Ecology; Resilience; Systems",
+          "definition": "Functional diversity and adaptive capacity describe the sustainability value of maintaining sufficiently varied components, roles, capabilities or response strategies so that a system can continue functioning, adapt, or recover when conditions change. Diversity matters here because different components may respond differently to the same disturbance, provide complementary functions, or provide alternatives when one pathway fails.",
+          "scope": "Applies when variation among components has a demonstrable or plausible functional relationship to resilience, adaptation, recovery, or response diversity. The relevant unit of diversity may be biological species, functional traits, technologies, infrastructure pathways, organizations, knowledge sources, or other system components. Diversity is not inherently sustainable: additional components can also increase resource demand, coordination burden, incompatibility, or risk.",
+          "core_ideas": "Maintain useful variation; preserve functional redundancy where failure is consequential; combine complementary capabilities; avoid unnecessary monocultures or single-path dependencies; assess the cost of diversity against its resilience benefit; distinguish diversity itself from the functions diversity enables.",
+          "semantic_description": "The principle connects biodiversity and other forms of system diversity to the ability to absorb disturbance, adapt and recover.",
+          "keywords_synonyms": "biodiversity; diversity; redundancy; resilience; adaptive capacity",
+          "sustainability_principle": "A system should preserve diversity where diversity provides the variation, redundancy or complementary functions needed to remain resilient under changing conditions.",
+          "principle_origin": "Nature-Derived; Ecological-Relationship-Derived",
+          "underlying_mechanism": "Diverse components can respond differently to disturbance, reducing the chance that one failure disables the whole system.",
+          "derived_from_practice_or_system": "Biodiversity and resilient ecological systems; diverse agricultural and social systems.",
+          "evidence_status": "UN SDG 15; IPCC AR6 sustainability and resilience literature.",
+          "implementation_maturity": "Established",
+          "transferability": "Agriculture; ecology; infrastructure; organizations; data/AI; communities",
+          "boundary_conditions": "Diversity should not be treated as inherently beneficial if it creates unmanaged hazards or unnecessary complexity.",
+          "recommendation_trigger": "Candidate discovery when the graph contains diversity, redundancy, modularity, biodiversity or resilience concepts; strengthen only when the application context shows functional diversity matters.",
+          "status": "Active",
+          ":LABEL": "SustainabilityConcept"
+        }
+      ],
+      "path": "data/repository/07_scr.csv",
+      "sha": "a9f37da32724ee7659a117157720b2a98f9bd6e6dacc622db9875f13ec29c818",
+      "integrity": "Matches existing compiled manifest",
+      "why": "Keeps domain meaning and relationships explicit, inspectable and separate from generated teaching prose."
+    },
+    {
+      "id": "08_guardrail.csv",
+      "name": "Curriculum guardrails",
+      "layer": "knowledge",
+      "group": "Recommendation",
+      "description": "Records curriculum scope and boundaries. These are source constraints, not provider-generated instructions.",
+      "consumer": "Input boundary and frozen runtime scope handling",
+      "count": 1771,
+      "countLabel": "rows",
+      "headers": [
+        "guardrail_id:ID",
+        "guardrail_level",
+        "topic",
+        "allowed_concepts",
+        "excluded_claims",
+        "evidence_type",
+        "status",
+        ":LABEL"
+      ],
+      "key": "guardrail_id:ID",
+      "statuses": {
+        "status": {
+          "Active": 1771
+        }
+      },
+      "sample": [
+        {
+          "guardrail_id:ID": "GR_COURSE_001",
+          "guardrail_level": "Course",
+          "topic": "Data Structures & Algorithms",
+          "allowed_concepts": "Foundations & Linear Data Structures; classes; objects; encapsulation; state and behaviour; abstraction; implementation of abstract data types; LIFO operations; push/pop; stack representation; expression processing; backtracking; Linear Data Structures; FIFO operations; queue representation; buffering; scheduling; breadth-first processing; dynamic nodes; pointers/references; insertion; deletion; traversal; Trees & Graphs; binary search trees; ordered search; balanced search trees; rotations; height balance; logarithmic search; update operations; Sorting & Searching; comparison sorting; partitioning; merging; time complexity; auxiliary space; search space reduction; comparison operations; Hashing; hash functions; hash tables; collisions; chaining; open addressing",
+          "excluded_claims": "Ordinary data-structure implementation, complexity analysis, searching, sorting, or traversal does not by itself establish an environmental, social, resource, governance, or other sustainability mechanism.",
+          "evidence_type": "Curriculum-derived disciplinary scope",
+          "status": "Active",
+          ":LABEL": "DisciplineGuardrail"
+        }
+      ],
+      "path": "data/repository/08_guardrail.csv",
+      "sha": "dc8883eb3563b947168352d6bde736876e947e4c3267518436bf7aaf8f4580b7",
+      "integrity": "Matches existing compiled manifest",
+      "why": "Keeps domain meaning and relationships explicit, inspectable and separate from generated teaching prose."
+    },
+    {
+      "id": "09_application_context.csv",
+      "name": "Application contexts",
+      "layer": "knowledge",
+      "group": "Recommendation",
+      "description": "Stores curated application situations, technical problems, actions and mechanisms. MiniLM and metadata/compatibility checks help select suggestions; the educator accepts one.",
+      "consumer": "Application Context discovery, compatibility and ranking; recommendation evidence",
+      "count": 40,
+      "countLabel": "rows",
+      "headers": [
+        "application_context_id:ID",
+        "name",
+        "context_granularity",
+        "application_domain",
+        "description",
+        "technical_problem",
+        "operational_action",
+        "mechanism",
+        "sustainability_outcome",
+        "boundary_conditions",
+        "relevant_disciplines",
+        "transferability",
+        "keywords_synonyms",
+        "status",
+        "context_source",
+        ":LABEL"
+      ],
+      "key": "application_context_id:ID",
+      "statuses": {
+        "status": {
+          "Active": 40
+        }
+      },
+      "sample": [
+        {
+          "application_context_id:ID": "AC_000001",
+          "name": "Textile Repair and Reuse Before Recycling",
+          "context_granularity": "Reusable_Practice_or_System",
+          "application_domain": "Textiles; Materials; Circular Economy",
+          "description": "Textile Repair and Reuse Before Recycling applies where Premature disposal or recycling of textile products that can still provide useful service. The operational response is Repair and reuse of textile products before recycling. The mechanism is Repair and reuse are used to retain product/material value before disposal or recycling. The intended sustainability outcome is Reduced resource demand and waste through extended use.",
+          "technical_problem": "Premature disposal or recycling of textile products that can still provide useful service.",
+          "operational_action": "Repair and reuse of textile products before recycling",
+          "mechanism": "Repair and reuse are used to retain product/material value before disposal or recycling",
+          "sustainability_outcome": "Reduced resource demand and waste through extended use",
+          "boundary_conditions": "Use only where repair or reuse can safely retain meaningful function; do not prefer extended use when safety, health, or performance is compromised.",
+          "relevant_disciplines": "Textile Engineering; Product Design; Materials Engineering; Industrial Design",
+          "transferability": "Cross-disciplinary where technical applicability and boundary conditions are satisfied",
+          "keywords_synonyms": "textile repair and reuse before recycling; repair and reuse are used to retain product/material value before disposal or recycling",
+          "status": "Active",
+          "context_source": "Repository_Seed",
+          ":LABEL": "ApplicationContext"
+        }
+      ],
+      "path": "data/repository/09_application_context.csv",
+      "sha": "5b579b25cbf7b0d6483bb6b177b02cce67d35e237f617a004b456be527b1759f",
+      "integrity": "Matches existing compiled manifest",
+      "why": "Keeps domain meaning and relationships explicit, inspectable and separate from generated teaching prose."
+    },
+    {
+      "id": "10_sdg_goal.csv",
+      "name": "SDG goals",
+      "layer": "knowledge",
+      "group": "Frameworks",
+      "description": "Names the Sustainable Development Goals. These are alignment destinations, not substitutes for technical recommendation evidence.",
+      "consumer": "Framework source loading; Framework Context Resolver",
+      "count": 17,
+      "countLabel": "rows",
+      "headers": [
+        "sdg_goal_id:ID",
+        "goal_number",
+        "title",
+        "description",
+        "status",
+        ":LABEL"
+      ],
+      "key": "sdg_goal_id:ID",
+      "statuses": {
+        "status": {
+          "Active": 17
+        }
+      },
+      "sample": [
+        {
+          "sdg_goal_id:ID": "SDG_GOAL_01",
+          "goal_number": "1",
+          "title": "End poverty in all its forms everywhere",
+          "description": "Goal 1 calls for an end to poverty in all its manifestations, including extreme poverty, over the next 15 years. All people everywhere, including the poorest and most vulnerable, should enjoy a basic standard of living and social protection benefits.",
+          "status": "Active",
+          ":LABEL": "SDGGoal"
+        }
+      ],
+      "path": "data/repository/10_sdg_goal.csv",
+      "sha": "8c5ef24aa88f9d0a5887bd0ad4230dc0dd5eec5f58c9042bf864c6c8c25e851c",
+      "integrity": "Matches existing compiled manifest",
+      "why": "Keeps domain meaning and relationships explicit, inspectable and separate from generated teaching prose."
+    },
+    {
+      "id": "11_sdg_target.csv",
+      "name": "SDG targets",
+      "layer": "knowledge",
+      "group": "Frameworks",
+      "description": "Provides specific targets under SDG goals, joined through BELONGS_TO_SDG.",
+      "consumer": "Framework source loading; Framework Context Resolver",
+      "count": 169,
+      "countLabel": "rows",
+      "headers": [
+        "sdg_target_id:ID",
+        "target_code",
+        "text",
+        "status",
+        ":LABEL"
+      ],
+      "key": "sdg_target_id:ID",
+      "statuses": {
+        "status": {
+          "Active": 169
+        }
+      },
+      "sample": [
+        {
+          "sdg_target_id:ID": "SDG_TARGET_1_1",
+          "target_code": "1.1",
+          "text": "By 2030, eradicate extreme poverty for all people everywhere, currently measured as people living on less than $1.25 a day",
+          "status": "Active",
+          ":LABEL": "SDGTarget"
+        }
+      ],
+      "path": "data/repository/11_sdg_target.csv",
+      "sha": "826c002bfb128238b0c7217ea0543974d4d3e5c0d1ebecb66957749edf1f4bf3",
+      "integrity": "Matches existing compiled manifest",
+      "why": "Keeps domain meaning and relationships explicit, inspectable and separate from generated teaching prose."
+    },
+    {
+      "id": "12_sdg_indicator.csv",
+      "name": "SDG indicators",
+      "layer": "knowledge",
+      "group": "Frameworks",
+      "description": "Provides SDG measurement indicators linked to targets. Their presence does not imply that measurement observations were supplied.",
+      "consumer": "Framework source loading; Framework Context Resolver",
+      "count": 251,
+      "countLabel": "rows",
+      "headers": [
+        "sdg_indicator_id:ID",
+        "indicator_code",
+        "text",
+        "status",
+        ":LABEL"
+      ],
+      "key": "sdg_indicator_id:ID",
+      "statuses": {
+        "status": {
+          "Active": 251
+        }
+      },
+      "sample": [
+        {
+          "sdg_indicator_id:ID": "SDG_INDICATOR_1_1_1",
+          "indicator_code": "1.1.1",
+          "text": "Proportion of the population living below the international poverty line by sex, age, employment status and geographic location (urban/rural)",
+          "status": "Active",
+          ":LABEL": "SDGIndicator"
+        }
+      ],
+      "path": "data/repository/12_sdg_indicator.csv",
+      "sha": "9ac4bd1b03dc903c0f5c56b1b2fa9a4e8f48f3037539089ab24eb7f0b022a79c",
+      "integrity": "Matches existing compiled manifest",
+      "why": "Keeps domain meaning and relationships explicit, inspectable and separate from generated teaching prose."
+    },
+    {
+      "id": "13_esd_objective.csv",
+      "name": "ESD learning objectives",
+      "layer": "knowledge",
+      "group": "Frameworks",
+      "description": "Provides Education for Sustainable Development learning objectives associated with SDGs.",
+      "consumer": "Framework source loading; Framework Context Resolver",
+      "count": 255,
+      "countLabel": "rows",
+      "headers": [
+        "esd_objective_id:ID",
+        "domain",
+        "objective_no",
+        "text",
+        "status",
+        ":LABEL"
+      ],
+      "key": "esd_objective_id:ID",
+      "statuses": {
+        "status": {
+          "Active": 255
+        }
+      },
+      "sample": [
+        {
+          "esd_objective_id:ID": "ESD_SDG01_COG_01",
+          "domain": "Cognitive",
+          "objective_no": "1",
+          "text": "The learner understands the concepts of extreme and relative poverty and is able to critically reflect on their underlying cultural and normative assumptions and practices.",
+          "status": "Active",
+          ":LABEL": "ESDLearningObjective"
+        }
+      ],
+      "path": "data/repository/13_esd_objective.csv",
+      "sha": "5935f91a1f604ecc0a7a676ef86f151c0189d1cae8a466b515f57dfa06ebad14",
+      "integrity": "Matches existing compiled manifest",
+      "why": "Keeps domain meaning and relationships explicit, inspectable and separate from generated teaching prose."
+    },
+    {
+      "id": "14_esd_competency.csv",
+      "name": "ESD competencies",
+      "layer": "knowledge",
+      "group": "Frameworks",
+      "description": "Provides Education for Sustainable Development competencies used through approved framework mappings.",
+      "consumer": "Framework source loading; Framework Context Resolver",
+      "count": 8,
+      "countLabel": "rows",
+      "headers": [
+        "esd_competency_id:ID",
+        "name",
+        "definition",
+        "scope",
+        "status",
+        ":LABEL"
+      ],
+      "key": "esd_competency_id:ID",
+      "statuses": {
+        "status": {
+          "Active": 8
+        }
+      },
+      "sample": [
+        {
+          "esd_competency_id:ID": "ESD_COMP_SYSTEMS_THINKING",
+          "name": "Systems thinking competency",
+          "definition": "the abilities to recognize and understand relationships; to analyse complex systems; to think of how systems are embedded within different domains and different scales; and to deal with uncertainty.",
+          "scope": "Cross-cutting; relevant to all SDGs",
+          "status": "Active",
+          ":LABEL": "ESDCompetency"
+        }
+      ],
+      "path": "data/repository/14_esd_competency.csv",
+      "sha": "d47b60be8f3fae910b64b057ffe2a0fd6faec798e3f28bd99221783c22305030",
+      "integrity": "Matches existing compiled manifest",
+      "why": "Keeps domain meaning and relationships explicit, inspectable and separate from generated teaching prose."
+    },
+    {
+      "id": "15_cf_knowledge.csv",
+      "name": "Commonwealth knowledge",
+      "layer": "knowledge",
+      "group": "Frameworks",
+      "description": "Provides the knowledge dimension of the Commonwealth framework.",
+      "consumer": "Framework source loading; Framework Context Resolver",
+      "count": 1089,
+      "countLabel": "rows",
+      "headers": [
+        "cf_knowledge_id:ID",
+        "education_level",
+        "sub_heading",
+        "text",
+        "status",
+        ":LABEL"
+      ],
+      "key": "cf_knowledge_id:ID",
+      "statuses": {
+        "status": {
+          "Active": 1089
+        }
+      },
+      "sample": [
+        {
+          "cf_knowledge_id:ID": "CFK_SDG01_SEC_001",
+          "education_level": "Secondary education",
+          "sub_heading": "Understanding poverty",
+          "text": "Poverty as a multidimensional issue, incorporating economic, social and political dimensions.",
+          "status": "Active",
+          ":LABEL": "CFKnowledge"
+        }
+      ],
+      "path": "data/repository/15_cf_knowledge.csv",
+      "sha": "3d93313679ce69e6f61fad0952396e046cdda6e94442cfad8fe7658add9e6c60",
+      "integrity": "Matches existing compiled manifest",
+      "why": "Keeps domain meaning and relationships explicit, inspectable and separate from generated teaching prose."
+    },
+    {
+      "id": "16_cf_skill.csv",
+      "name": "Commonwealth skills",
+      "layer": "knowledge",
+      "group": "Frameworks",
+      "description": "Provides the skills dimension of the Commonwealth framework.",
+      "consumer": "Framework source loading; Framework Context Resolver",
+      "count": 1026,
+      "countLabel": "rows",
+      "headers": [
+        "cf_skill_id:ID",
+        "education_level",
+        "sub_heading",
+        "text",
+        "status",
+        ":LABEL"
+      ],
+      "key": "cf_skill_id:ID",
+      "statuses": {
+        "status": {
+          "Active": 1026
+        }
+      },
+      "sample": [
+        {
+          "cf_skill_id:ID": "CFS_SDG01_SEC_001",
+          "education_level": "Secondary education",
+          "sub_heading": "Critical thinking and research",
+          "text": "Investigate poverty using primary and secondary sources, analysing data and statistics.",
+          "status": "Active",
+          ":LABEL": "CFSkill"
+        }
+      ],
+      "path": "data/repository/16_cf_skill.csv",
+      "sha": "deb3b6f755bb3a96c1d55dd82644ab16384dfeff9e0d14b8061024c06f234d9b",
+      "integrity": "Matches existing compiled manifest",
+      "why": "Keeps domain meaning and relationships explicit, inspectable and separate from generated teaching prose."
+    },
+    {
+      "id": "17_cf_value.csv",
+      "name": "Commonwealth values",
+      "layer": "knowledge",
+      "group": "Frameworks",
+      "description": "Provides the values dimension of the Commonwealth framework.",
+      "consumer": "Framework source loading; Framework Context Resolver",
+      "count": 986,
+      "countLabel": "rows",
+      "headers": [
+        "cf_value_id:ID",
+        "education_level",
+        "sub_heading",
+        "text",
+        "status",
+        ":LABEL"
+      ],
+      "key": "cf_value_id:ID",
+      "statuses": {
+        "status": {
+          "Active": 986
+        }
+      },
+      "sample": [
+        {
+          "cf_value_id:ID": "CFV_SDG01_SEC_001",
+          "education_level": "Secondary education",
+          "sub_heading": "Poverty as a justice and ethical issue",
+          "text": "Develop a sense of social justice and recognise poverty as an ethical concern.",
+          "status": "Active",
+          ":LABEL": "CFValue"
+        }
+      ],
+      "path": "data/repository/17_cf_value.csv",
+      "sha": "d7dc0aa8c14b859eae92135335b234fce731418dac980dfa52f27f858cd0f0e2",
+      "integrity": "Matches existing compiled manifest",
+      "why": "Keeps domain meaning and relationships explicit, inspectable and separate from generated teaching prose."
+    },
+    {
+      "id": "18_cf_competency.csv",
+      "name": "Commonwealth competencies",
+      "layer": "knowledge",
+      "group": "Frameworks",
+      "description": "Provides the competency dimension of the Commonwealth framework.",
+      "consumer": "Framework source loading; Framework Context Resolver",
+      "count": 5,
+      "countLabel": "rows",
+      "headers": [
+        "cf_competency_id:ID",
+        "name",
+        "definition",
+        "scope",
+        "status",
+        ":LABEL"
+      ],
+      "key": "cf_competency_id:ID",
+      "statuses": {
+        "status": {
+          "Active": 5
+        }
+      },
+      "sample": [
+        {
+          "cf_competency_id:ID": "CF_COMP_ENVISION",
+          "name": "Envisioning change",
+          "definition": "The ability to imagine alternative futures and connect long-term goals with present-day actions. This includes identifying relevance and meaning for different stakeholders, motivating action through shared aspirations, and cultivating ownership of processes and outcomes.",
+          "scope": "Cross-cutting; all 17 SDGs and lifelong learning continuum",
+          "status": "Active",
+          ":LABEL": "CFCompetency"
+        }
+      ],
+      "path": "data/repository/18_cf_competency.csv",
+      "sha": "78fba4e221e3667bc50a128f2f51d1f325739b115d1b5fea2eaad74827cfe2ea",
+      "integrity": "Matches existing compiled manifest",
+      "why": "Keeps domain meaning and relationships explicit, inspectable and separate from generated teaching prose."
+    },
+    {
+      "id": "relationships.csv",
+      "name": "Graph relationships",
+      "layer": "knowledge",
+      "group": "Connections",
+      "description": "Stores exact source ID, target ID and relationship type. Direction and type carry meaning; these are not arbitrary similarity links.",
+      "consumer": "Graph compiler; runtime graph; typed relationship traversal",
+      "count": 10347,
+      "countLabel": "rows",
+      "headers": [
+        ":START_ID",
+        ":END_ID",
+        ":TYPE"
+      ],
+      "key": "Directed triple: :START_ID + :END_ID + :TYPE",
+      "statuses": {},
+      "sample": [
+        {
+          ":START_ID": "KFR_000001",
+          ":END_ID": "KCR_000013",
+          ":TYPE": "ACTS_ON_KCR"
+        }
+      ],
+      "path": "data/repository/relationships.csv",
+      "sha": "ba140a9a1dd75206e80ff090d3966f20a961b0893bd4f0b2068c446300c7b4f1",
+      "integrity": "Matches existing compiled manifest",
+      "why": "Keeps domain meaning and relationships explicit, inspectable and separate from generated teaching prose."
+    },
+    {
+      "id": "Framework_Role_Matrix",
+      "name": "Framework role rules",
+      "layer": "kit",
+      "group": "Framework authority",
+      "description": "Defines what each framework family/category may contribute, permitted direct elements and behaviour when primary compatibility is absent.",
+      "consumer": "Framework Context Resolver",
+      "key": "Framework_Family + Framework_Category + Element_Type",
+      "count": 22,
+      "countLabel": "effective rows",
+      "headers": [
+        "All_Permitted_Direct_Elements",
+        "Educator_Summary_Rule",
+        "Element_Type",
+        "Framework_Category",
+        "Framework_Family",
+        "Intended_Contribution",
+        "Primary_Compatibility_Elements",
+        "Usage_Constraint",
+        "When_Primary_Gate_Missing",
+        "_source_file",
+        "_source_row"
+      ],
+      "statuses": {
+        "Element_Type": {
+          "Goal": 1,
+          "Target": 1,
+          "Indicator": 1,
+          "LearningObjective_Cognitive": 1,
+          "LearningObjective_SocioEmotional": 1,
+          "LearningObjective_Behavioural": 1,
+          "Competency": 13,
+          "Knowledge": 1,
+          "Skill": 1,
+          "Value": 1
+        }
+      },
+      "sample": [
+        {
+          "All_Permitted_Direct_Elements": "",
+          "Educator_Summary_Rule": "Eligible for concise summary only after runtime status is ACTIVE_CONTEXT or ACTIVE_DIRECT.",
+          "Element_Type": "Goal",
+          "Framework_Category": "SDG_GOAL",
+          "Framework_Family": "UN_SDG",
+          "Intended_Contribution": "Explain the broad sustainability outcome connected to the selected activity and application context.",
+          "Primary_Compatibility_Elements": "",
+          "Usage_Constraint": "Context only; do not change Template_ID, task, deliverable, assessment or teaching evidence.",
+          "When_Primary_Gate_Missing": "ALWAYS_CONTEXT_ONLY",
+          "_source_file": "Framework_Context_Resolver_Repository_All295_v0.2_FROZEN.xlsx",
+          "_source_row": 2
+        }
+      ],
+      "path": "src/recommendation_system/educator_kit/data/stage_f_sources.json → tables.Framework_Role_Matrix",
+      "sha": "25286b8408fee96afdb4af54ffb9f32ddf20b54779a6bba9f9763aa5188da13e",
+      "integrity": "Static current release composition; base + approved additive output-contract release",
+      "sources": [
+        "Framework_Context_Resolver_Repository_All295_v0.2_FROZEN.xlsx"
+      ],
+      "why": "Makes teaching requirements and evidence use explicit before the provider writes a draft."
+    },
+    {
+      "id": "Reference_SCR_Use",
+      "name": "Reference-to-concept use",
+      "layer": "kit",
+      "group": "Material & evidence",
+      "description": "States how a reference may support a specific sustainability concept, with fit status, applicability and exact use instructions.",
+      "consumer": "Material Resolver; material applicability checks",
+      "key": "Reference_SCR_Use_ID",
+      "count": 15,
+      "countLabel": "effective rows",
+      "headers": [
+        "Active",
+        "Applicability_Condition",
+        "Boundary_Warning",
+        "Fit_Status",
+        "Reference_ID",
+        "Reference_SCR_Use_ID",
+        "Review_Status",
+        "SCR_ID",
+        "Use_In_Kit_Instruction",
+        "Use_Role",
+        "Why_Useful",
+        "_source_file",
+        "_source_row"
+      ],
+      "statuses": {
+        "Active": {
+          "YES": 15
+        },
+        "Fit_Status": {
+          "CONDITIONAL_FIT": 2,
+          "REVIEWED_FIT": 13
+        },
+        "Review_Status": {
+          "ACCEPTED_PILOT": 15
+        }
+      },
+      "sample": [
+        {
+          "Active": "YES",
+          "Applicability_Condition": "Use only as contextual evidence for metric/constraint discussion.",
+          "Boundary_Warning": "Do not present the UN Action record as proof of a specific optimization formulation.",
+          "Fit_Status": "CONDITIONAL_FIT",
+          "Reference_ID": "TREF_0001",
+          "Reference_SCR_Use_ID": "RSU_0001",
+          "Review_Status": "ACCEPTED_PILOT",
+          "SCR_ID": "SCR_0033",
+          "Use_In_Kit_Instruction": "Use as a real-world contextual example after or alongside the primary teaching material; explain that the source does not itself define a formal optimization model.",
+          "Use_Role": "REAL_WORLD_EXAMPLE",
+          "Why_Useful": "Provides a real water-security action involving demand assessment, water availability, monitoring and water-use decisions.",
+          "_source_file": "Teaching_Case_Evidence_Repository_Lean_v0.2_OutputContract_Aligned.xlsx",
+          "_source_row": 2
+        }
+      ],
+      "path": "src/recommendation_system/educator_kit/data/stage_f_sources.json → tables.Reference_SCR_Use",
+      "sha": "25286b8408fee96afdb4af54ffb9f32ddf20b54779a6bba9f9763aa5188da13e",
+      "integrity": "Static current release composition; base + approved additive output-contract release",
+      "sources": [
+        "Teaching_Case_Evidence_Repository_Lean_v0.2_OutputContract_Aligned.xlsx"
+      ],
+      "why": "Makes teaching requirements and evidence use explicit before the provider writes a draft."
+    },
+    {
+      "id": "SCR_Framework_Mapping",
+      "name": "Concept-to-framework mappings",
+      "layer": "kit",
+      "group": "Framework authority",
+      "description": "Maps sustainability concepts to framework entries with relationship roles, education levels and applicability conditions.",
+      "consumer": "Framework Context Resolver",
+      "key": "SCR_ID + Framework_Element_ID",
+      "count": 1818,
+      "countLabel": "effective rows",
+      "headers": [
+        "Applicability_Condition",
+        "Education_Level",
+        "Framework_Element_ID",
+        "Mapping_Role",
+        "Relationship_Type",
+        "SCR_ID",
+        "_source_file",
+        "_source_row"
+      ],
+      "statuses": {},
+      "sample": [
+        {
+          "Applicability_Condition": "",
+          "Education_Level": "",
+          "Framework_Element_ID": "SDG_GOAL_15",
+          "Mapping_Role": "CORE",
+          "Relationship_Type": "ALIGNS_WITH_SDG_GOAL",
+          "SCR_ID": "SCR_0001",
+          "_source_file": "SCR_Framework_Mapping_Lean_v0.6_Complete_FullCF_FROZEN.xlsx",
+          "_source_row": 2
+        }
+      ],
+      "path": "src/recommendation_system/educator_kit/data/stage_f_sources.json → tables.SCR_Framework_Mapping",
+      "sha": "25286b8408fee96afdb4af54ffb9f32ddf20b54779a6bba9f9763aa5188da13e",
+      "integrity": "Static current release composition; base + approved additive output-contract release",
+      "sources": [
+        "SCR_Framework_Mapping_Lean_v0.6_Complete_FullCF_FROZEN.xlsx"
+      ],
+      "why": "Makes teaching requirements and evidence use explicit before the provider writes a draft."
+    },
+    {
+      "id": "SCR_Pedagogical_Template",
+      "name": "Teaching templates",
+      "layer": "kit",
+      "group": "Teaching structure",
+      "description": "Connects a recommended sustainability concept to approved teaching approaches, applicability conditions and expected learner evidence.",
+      "consumer": "Pedagogical template selector",
+      "key": "Template_ID",
+      "count": 295,
+      "countLabel": "effective rows",
+      "headers": [
+        "Applicability_Condition",
+        "Expected_Learner_Evidence",
+        "Pedagogical_Intent",
+        "Reusable_Template_Pattern",
+        "SCR_ID",
+        "Template_ID",
+        "Template_Role",
+        "Template_Title",
+        "Template_Type",
+        "_source_file",
+        "_source_row"
+      ],
+      "statuses": {},
+      "sample": [
+        {
+          "Applicability_Condition": "",
+          "Expected_Learner_Evidence": "A system map that connects mechanism, affected functions/resources, feedbacks, evidence, assumptions and boundary limitations.",
+          "Pedagogical_Intent": "Develop systems reasoning around Functional Diversity and Adaptive Capacity by tracing the mechanism: Diverse components can respond differently to disturbance, reducing the chance that one failure disables the whole system.",
+          "Reusable_Template_Pattern": "1. Learners map stocks, flows, actors, functions, feedbacks and time/space boundaries relevant to Functional Diversity and Adaptive Capacity.\n2. Apply the SCR core ideas (Maintain useful variation; preserve functional redundancy where failure is consequential; combine complementary capabilities).\n3. Test whether the interpretation remains valid under this boundary: Diversity should not be treated as inherently beneficial if it creates unmanaged hazards or unnecessary complexity.",
+          "SCR_ID": "SCR_0001",
+          "Template_ID": "SPT_SCR_0001_01",
+          "Template_Role": "CORE",
+          "Template_Title": "Functional Diversity and Adaptive Capacity System Mechanism Analysis",
+          "Template_Type": "CaseStudy",
+          "_source_file": "SCR_Pedagogical_Repository_Lean_v1.0_FROZEN.xlsx",
+          "_source_row": 2
+        }
+      ],
+      "path": "src/recommendation_system/educator_kit/data/stage_f_sources.json → tables.SCR_Pedagogical_Template",
+      "sha": "25286b8408fee96afdb4af54ffb9f32ddf20b54779a6bba9f9763aa5188da13e",
+      "integrity": "Static current release composition; base + approved additive output-contract release",
+      "sources": [
+        "SCR_Pedagogical_Repository_Lean_v1.0_FROZEN.xlsx"
+      ],
+      "why": "Makes teaching requirements and evidence use explicit before the provider writes a draft."
+    },
+    {
+      "id": "Teaching_Case_Input",
+      "name": "Teaching source items",
+      "layer": "kit",
+      "group": "Material & evidence",
+      "description": "Holds case facts and starting material, with Case_Input_ID provenance. The provider may cite only eligible supplied source-item identifiers.",
+      "consumer": "Material Resolver; deterministic assembly; KitValidator",
+      "key": "Case_Input_ID",
+      "count": 157,
+      "countLabel": "effective rows",
+      "headers": [
+        "Active",
+        "Case_Input_ID",
+        "Content_Origin",
+        "Element_Category",
+        "Element_ID",
+        "Input_Group",
+        "Input_Label",
+        "Input_Order",
+        "Input_Value_or_Description",
+        "Quality_or_Applicability_Note",
+        "Ready_For_Use",
+        "Reference_ID",
+        "Source_Locator",
+        "Unit",
+        "Verification_Status",
+        "_source_file",
+        "_source_row"
+      ],
+      "statuses": {
+        "Active": {
+          "YES": 157
+        },
+        "Ready_For_Use": {
+          "YES": 157
+        }
+      },
+      "sample": [
+        {
+          "Active": "YES",
+          "Case_Input_ID": "TCI_0001",
+          "Content_Origin": "SOURCE_DERIVED",
+          "Element_Category": "STARTING_MATERIAL",
+          "Element_ID": "CASE_FACTS",
+          "Input_Group": "Real-world action context",
+          "Input_Label": "Water-security action",
+          "Input_Order": "1",
+          "Input_Value_or_Description": "The action addresses water security in tribal villages through demand assessment, water-structure mapping, supply enhancement, village water governance and monitoring.",
+          "Quality_or_Applicability_Note": "",
+          "Ready_For_Use": "YES",
+          "Reference_ID": "TREF_0001",
+          "Source_Locator": "Implementation / action description",
+          "Unit": "",
+          "Verification_Status": "VERIFIED_SOURCE",
+          "_source_file": "Teaching_Case_Evidence_Repository_Lean_v0.2_OutputContract_Aligned.xlsx",
+          "_source_row": 2
+        }
+      ],
+      "path": "src/recommendation_system/educator_kit/data/stage_f_sources.json → tables.Teaching_Case_Input",
+      "sha": "25286b8408fee96afdb4af54ffb9f32ddf20b54779a6bba9f9763aa5188da13e",
+      "integrity": "Static current release composition; base + approved additive output-contract release",
+      "sources": [
+        "Teaching_Case_Evidence_Repository_Lean_v0.2_OutputContract_Aligned.xlsx"
+      ],
+      "why": "Makes teaching requirements and evidence use explicit before the provider writes a draft."
+    },
+    {
+      "id": "Teaching_Reference",
+      "name": "Teaching references",
+      "layer": "kit",
+      "group": "Material & evidence",
+      "description": "Holds titles, access points, source summaries, verification information and usage constraints. A reference is not automatically usable for every concept.",
+      "consumer": "Material Resolver",
+      "key": "Reference_ID",
+      "count": 15,
+      "countLabel": "effective rows",
+      "headers": [
+        "Access_Date",
+        "Active",
+        "Declared_Indicators",
+        "Declared_SDGs",
+        "Declared_Targets",
+        "Description",
+        "Primary_Domain",
+        "Publication_or_Data_Date",
+        "Reference_ID",
+        "Reference_Type",
+        "Relevant_Section_or_Timecode",
+        "Source_Mode",
+        "Source_Organization_or_Author",
+        "Source_URL_DOI",
+        "Task_Relevant_Source_Summary",
+        "Title",
+        "Usage_or_License_Note",
+        "Verification_Status",
+        "_source_file",
+        "_source_row"
+      ],
+      "statuses": {
+        "Active": {
+          "YES": 15
+        }
+      },
+      "sample": [
+        {
+          "Access_Date": "2026-09-20",
+          "Active": "YES",
+          "Declared_Indicators": "",
+          "Declared_SDGs": "1; 2; 6",
+          "Declared_Targets": "",
+          "Description": "Raah Foundation water-security action combining demand assessment, water-structure mapping, supply enhancement, village water governance, monitoring and water-use decisions.",
+          "Primary_Domain": "Water Resources / Community Water Security",
+          "Publication_or_Data_Date": "2023-04-01 to 2030-06-30",
+          "Reference_ID": "TREF_0001",
+          "Reference_Type": "UN_SDG_ACTION",
+          "Relevant_Section_or_Timecode": "Implementation, KPIs, follow-up and entity/SDG sections",
+          "Source_Mode": "EXTERNAL_VERIFIED_SOURCE",
+          "Source_Organization_or_Author": "Raah Foundation",
+          "Source_URL_DOI": "https://sdgs.un.org/partnerships/catch-every-drop-eradicate-water-poverty-and-water-slavery",
+          "Task_Relevant_Source_Summary": "Source reports demand-side assessment; mapping/repair/enhancement of water structures; village water committees; decisions based on water levels; KPI that water demand remains below water available.",
+          "Title": "Catch every drop to eradicate water poverty and water slavery",
+          "Usage_or_License_Note": "UN DESA SDG Actions Platform page; use source link and attribution. Do not infer undeclared targets/indicators from goal-page display.",
+          "Verification_Status": "VERIFIED_SOURCE",
+          "_source_file": "Teaching_Case_Evidence_Repository_Lean_v0.2_OutputContract_Aligned.xlsx",
+          "_source_row": 2
+        }
+      ],
+      "path": "src/recommendation_system/educator_kit/data/stage_f_sources.json → tables.Teaching_Reference",
+      "sha": "25286b8408fee96afdb4af54ffb9f32ddf20b54779a6bba9f9763aa5188da13e",
+      "integrity": "Static current release composition; base + approved additive output-contract release",
+      "sources": [
+        "Teaching_Case_Evidence_Repository_Lean_v0.2_OutputContract_Aligned.xlsx"
+      ],
+      "why": "Makes teaching requirements and evidence use explicit before the provider writes a draft."
+    },
+    {
+      "id": "Template_Contract_Index",
+      "name": "Template contract index",
+      "layer": "kit",
+      "group": "Output requirements",
+      "description": "Identifies the output contract belonging to a template, including its per-template version. The additive v0.3 release does not relabel every contract as 0.3.",
+      "consumer": "Output contract resolver",
+      "key": "Kit_Contract_ID",
+      "count": 295,
+      "countLabel": "effective rows",
+      "headers": [
+        "Active",
+        "Canonical_Applicability_Condition",
+        "Canonical_Expected_Learner_Evidence",
+        "Contract_Review_Status",
+        "Contract_Version",
+        "Kit_Contract_ID",
+        "SCR_ID",
+        "Template_ID",
+        "Template_Role",
+        "Template_Title",
+        "Template_Type",
+        "_source_file",
+        "_source_row"
+      ],
+      "statuses": {
+        "Active": {
+          "YES": 295
+        },
+        "Contract_Version": {
+          "0.2": 293,
+          "0.3": 2
+        }
+      },
+      "sample": [
+        {
+          "Active": "YES",
+          "Canonical_Applicability_Condition": "",
+          "Canonical_Expected_Learner_Evidence": "A system map that connects mechanism, affected functions/resources, feedbacks, evidence, assumptions and boundary limitations.",
+          "Contract_Review_Status": "FROZEN_V1_ACCEPTED",
+          "Contract_Version": "0.2",
+          "Kit_Contract_ID": "KOC_SPT_SCR_0001_01",
+          "SCR_ID": "SCR_0001",
+          "Template_ID": "SPT_SCR_0001_01",
+          "Template_Role": "CORE",
+          "Template_Title": "Functional Diversity and Adaptive Capacity System Mechanism Analysis",
+          "Template_Type": "CaseStudy",
+          "_source_file": "Template_Output_Element_Contract_Repository_Lean_v0.2_FROZEN.xlsx",
+          "_source_row": 2
+        }
+      ],
+      "path": "src/recommendation_system/educator_kit/data/stage_f_sources.json → tables.Template_Contract_Index",
+      "sha": "25286b8408fee96afdb4af54ffb9f32ddf20b54779a6bba9f9763aa5188da13e",
+      "integrity": "Static current release composition; base + approved additive output-contract release",
+      "sources": [
+        "Template_Output_Element_Contract_Repository_Lean_v0.2_FROZEN.xlsx",
+        "Template_Output_Element_Contract_Repository_Lean_v0.3_FROZEN.xlsx"
+      ],
+      "why": "Makes teaching requirements and evidence use explicit before the provider writes a draft."
+    },
+    {
+      "id": "Template_Framework_Resolver",
+      "name": "Template framework permissions",
+      "layer": "kit",
+      "group": "Framework authority",
+      "description": "Resolves framework use at template/output level, including activation, permitted outputs, source lookup keys and applicability boundaries.",
+      "consumer": "Framework Context Resolver; framework authority assembly",
+      "key": "Template_ID + Framework_Element_ID",
+      "count": 5695,
+      "countLabel": "effective rows",
+      "headers": [
+        "Activation_Rule_ID",
+        "Applicability_Condition",
+        "Authoritative_Source_Repository",
+        "Authoritative_Text_Join_Key",
+        "Education_Level",
+        "Element_Type",
+        "Framework_Category",
+        "Framework_Element_ID",
+        "Framework_Family",
+        "Intended_Contribution",
+        "Mapping_Role",
+        "Permitted_Direct_Output_Elements",
+        "Primary_Compatible_Output_Elements",
+        "Relationship_Type",
+        "Resolver_Config_Active",
+        "Resolver_Row_ID",
+        "Runtime_Candidate_Class",
+        "SCR_ID",
+        "Source_Text_Availability",
+        "Summary_Display_Eligible",
+        "Template_Enrichment_Mode",
+        "Template_ID",
+        "Template_Role",
+        "Template_Title",
+        "Template_Type",
+        "Usage_Constraint",
+        "_source_file",
+        "_source_row"
+      ],
+      "statuses": {
+        "Element_Type": {
+          "Goal": 681,
+          "Target": 825,
+          "Indicator": 600,
+          "LearningObjective_Cognitive": 181,
+          "LearningObjective_SocioEmotional": 74,
+          "Competency": 996,
+          "Knowledge": 855,
+          "Value": 531,
+          "Skill": 840,
+          "LearningObjective_Behavioural": 112
+        },
+        "Resolver_Config_Active": {
+          "ACTIVE": 5695
+        }
+      },
+      "sample": [
+        {
+          "Activation_Rule_ID": "FCR-ACT-01",
+          "Applicability_Condition": "",
+          "Authoritative_Source_Repository": "UN_SDG_Lean_v1 / authoritative UN SDG Goal→Target→Indicator repository",
+          "Authoritative_Text_Join_Key": "SDG_GOAL_15",
+          "Education_Level": "",
+          "Element_Type": "Goal",
+          "Framework_Category": "SDG_GOAL",
+          "Framework_Element_ID": "SDG_GOAL_15",
+          "Framework_Family": "UN_SDG",
+          "Intended_Contribution": "Explain the broad sustainability outcome connected to the selected activity and application context.",
+          "Mapping_Role": "CORE",
+          "Permitted_Direct_Output_Elements": "",
+          "Primary_Compatible_Output_Elements": "",
+          "Relationship_Type": "ALIGNS_WITH_SDG_GOAL",
+          "Resolver_Config_Active": "ACTIVE",
+          "Resolver_Row_ID": "FCR_SPT_SCR_0001_01_SDG_GOAL_15",
+          "Runtime_Candidate_Class": "CONTEXT_ONLY_CANDIDATE",
+          "SCR_ID": "SCR_0001",
+          "Source_Text_Availability": "JOIN_SDG_REPO",
+          "Summary_Display_Eligible": "YES",
+          "Template_Enrichment_Mode": "CONTEXT_ONLY",
+          "Template_ID": "SPT_SCR_0001_01",
+          "Template_Role": "CORE",
+          "Template_Title": "Functional Diversity and Adaptive Capacity System Mechanism Analysis",
+          "Template_Type": "CaseStudy",
+          "Usage_Constraint": "Context only; do not change Template_ID, task, deliverable, assessment or teaching evidence.",
+          "_source_file": "Framework_Context_Resolver_Repository_All295_v0.2_FROZEN.xlsx",
+          "_source_row": 2
+        }
+      ],
+      "path": "src/recommendation_system/educator_kit/data/stage_f_sources.json → tables.Template_Framework_Resolver",
+      "sha": "25286b8408fee96afdb4af54ffb9f32ddf20b54779a6bba9f9763aa5188da13e",
+      "integrity": "Static current release composition; base + approved additive output-contract release",
+      "sources": [
+        "Framework_Context_Resolver_Repository_All295_v0.2_FROZEN.xlsx"
+      ],
+      "why": "Makes teaching requirements and evidence use explicit before the provider writes a draft."
+    },
+    {
+      "id": "Template_Output_Element_Contract",
+      "name": "Required Kit elements",
+      "layer": "kit",
+      "group": "Output requirements",
+      "description": "Defines exact element membership, order, student/educator layer, conditional requirements and ready-to-use tests. These rules constrain generation and validation.",
+      "consumer": "Output contract resolver; canonical schema; KitValidator",
+      "key": "Element_Contract_ID",
+      "count": 5015,
+      "countLabel": "effective rows",
+      "headers": [
+        "Active",
+        "Contract_Version",
+        "Element_Category",
+        "Element_Contract_ID",
+        "Element_ID",
+        "Element_Label",
+        "Element_Order",
+        "Element_Requirement",
+        "Kit_Contract_ID",
+        "Minimum_Content",
+        "Ready_to_Use_Test",
+        "Reference_Required",
+        "Required_Level",
+        "Review_Status",
+        "Student_or_Educator_Layer",
+        "Template_ID",
+        "Trigger_Condition",
+        "_source_file",
+        "_source_row"
+      ],
+      "statuses": {
+        "Active": {
+          "YES": 5015
+        },
+        "Contract_Version": {
+          "0.1": 4718,
+          "0.2": 295,
+          "0.3": 2
+        },
+        "Review_Status": {
+          "FROZEN_V1_ACCEPTED": 5015
+        }
+      },
+      "sample": [
+        {
+          "Active": "YES",
+          "Contract_Version": "0.1",
+          "Element_Category": "ORIENTATION",
+          "Element_Contract_ID": "EOC_SPT_SCR_0001_01_01",
+          "Element_ID": "TEACHING_PURPOSE",
+          "Element_Label": "Why this activity is being used",
+          "Element_Order": "1",
+          "Element_Requirement": "State the specific learning purpose of the selected pedagogical template in the current topic and application context.",
+          "Kit_Contract_ID": "KOC_SPT_SCR_0001_01",
+          "Minimum_Content": "One concise, context-specific statement.",
+          "Ready_to_Use_Test": "PASS only when the purpose is specific to the selected topic/template and not a generic sustainability statement.",
+          "Reference_Required": "NO",
+          "Required_Level": "REQUIRED",
+          "Review_Status": "FROZEN_V1_ACCEPTED",
+          "Student_or_Educator_Layer": "EDUCATOR",
+          "Template_ID": "SPT_SCR_0001_01",
+          "Trigger_Condition": "",
+          "_source_file": "Template_Output_Element_Contract_Repository_Lean_v0.2_FROZEN.xlsx",
+          "_source_row": 2
+        }
+      ],
+      "path": "src/recommendation_system/educator_kit/data/stage_f_sources.json → tables.Template_Output_Element_Contract",
+      "sha": "25286b8408fee96afdb4af54ffb9f32ddf20b54779a6bba9f9763aa5188da13e",
+      "integrity": "Static current release composition; base + approved additive output-contract release",
+      "sources": [
+        "Template_Output_Element_Contract_Repository_Lean_v0.2_FROZEN.xlsx",
+        "Template_Output_Element_Contract_Repository_Lean_v0.3_FROZEN.xlsx"
+      ],
+      "why": "Makes teaching requirements and evidence use explicit before the provider writes a draft."
+    },
+    {
+      "id": "material_rules",
+      "name": "Material applicability rules",
+      "layer": "kit",
+      "group": "Material & evidence",
+      "description": "Classifies governed material conditions and how they are evaluated. Separates prerequisite admission checks from permitted post-validation use obligations and non-gating findings.",
+      "consumer": "Material applicability evaluation; obligation proof binding",
+      "key": "Material_Applicability_Rule_ID",
+      "count": 15,
+      "countLabel": "rules",
+      "headers": [
+        "Active",
+        "Condition_Class",
+        "Condition_Text_Hash",
+        "Decision_Notes",
+        "Evaluation_Mode",
+        "Material_Applicability_Rule_ID",
+        "Obligations",
+        "Prerequisite",
+        "Reference_SCR_Use_ID",
+        "Rule_Version"
+      ],
+      "statuses": {
+        "Evaluation_Mode": {
+          "NON_GATING_USE_CONSTRAINT": 3,
+          "GATING": 2,
+          "UNRESOLVED": 2,
+          "NON_GATING_PROVENANCE_CONSTRAINT": 4,
+          "NON_GATING_BOUNDARY_CONSTRAINT": 1,
+          "EDUCATOR_CONFIRMATION_REQUIRED": 1,
+          "MIXED": 2
+        }
+      },
+      "sample": [
+        {
+          "Active": true,
+          "Condition_Class": "USE_INSTRUCTION",
+          "Condition_Text_Hash": "2838903c0a42068cf53bf0d7b6ce9a85a9adde596fdcbf07dd25fcdecfc13b61",
+          "Decision_Notes": "Non-gating USE instruction. Material may proceed only through existing structural/role/fit rules; contextual-only use must be carried downstream and requires proof where the selected contract exposes the relevant instruction/limitation field.",
+          "Evaluation_Mode": "NON_GATING_USE_CONSTRAINT",
+          "Material_Applicability_Rule_ID": "MAR_0001",
+          "Obligations": [
+            {
+              "Enforcement_Requirement": "DOWNSTREAM_PROOF_REQUIRED",
+              "Instruction_Target": "REFERENCE_USE_IN_TASK",
+              "Kind": "USE",
+              "Source_Locator": "RSU_0001/Applicability_Condition"
+            }
+          ],
+          "Prerequisite": null,
+          "Reference_SCR_Use_ID": "RSU_0001",
+          "Rule_Version": "0.1"
+        }
+      ],
+      "path": "src/recommendation_system/educator_kit/data/material_applicability_rules_v0_1.json",
+      "sha": "959c263b8061aff4c6cac60ffebd56beb6e1a18efb8b594558a908cad3814142",
+      "integrity": "Read from current source projection",
+      "why": "Stops “material exists” from being confused with “material is applicable and sufficient.”"
+    },
+    {
+      "id": "contract_release",
+      "name": "Additive output release v0.3",
+      "layer": "kit",
+      "group": "Output requirements",
+      "description": "Retains the frozen base projection and applies updated headers plus added elements. Individual contracts retain their own version identity.",
+      "consumer": "current_output_contract(sources)",
+      "key": "Template_ID / Element_Contract_ID",
+      "count": 2,
+      "countLabel": "added elements",
+      "headers": [
+        "Added_Elements",
+        "Base_Source_File",
+        "Base_Source_SHA256",
+        "Source_File",
+        "Source_SHA256",
+        "Updated_Headers",
+        "Version"
+      ],
+      "statuses": {
+        "Release": {
+          "OUTPUT_CONTRACT_V0_3_ABC": 1
+        },
+        "Updated headers": {
+          "count": 2
+        }
+      },
+      "sample": [
+        {
+          "Base_Source_File": "Template_Output_Element_Contract_Repository_Lean_v0.2_FROZEN.xlsx",
+          "Base_Source_SHA256": "f839d5964a4e5e7722d495646382f01f220408a3095567010e18d0635702baec",
+          "Source_File": "Template_Output_Element_Contract_Repository_Lean_v0.3_FROZEN.xlsx",
+          "Source_SHA256": "16199aef7bf6dd4ad0279e56ba16e0e9c2a08982676540f647a9cf98e8393444",
+          "Version": "OUTPUT_CONTRACT_V0_3_ABC"
+        }
+      ],
+      "path": "src/recommendation_system/educator_kit/data/output_contract_v0_3.json",
+      "sha": "3a361a2679ecec9b21b56d1ffb4ef47d090344843bd01ce0ac0c966f7ce621f8",
+      "integrity": "Expected accepted hash match: True",
+      "why": "Allows an approved additive release without overwriting the retained base source."
+    },
+    {
+      "id": "compiled",
+      "name": "Compiled graph + corpus",
+      "layer": "runtime",
+      "group": "Runtime",
+      "description": "A built NetworkX graph and semantic corpus derived from canonical CSVs. The manifest records source hashes; the current page compares source hashes without compiling anything.",
+      "consumer": "Runtime repository loader; Recommendation Core",
+      "why": "Derived runtime files are not a second editable repository.",
+      "count": null,
+      "countLabel": "",
+      "headers": [],
+      "statuses": {},
+      "sample": [],
+      "key": "Not an entity repository",
+      "path": "artifacts/compiled/manifest.json",
+      "sha": "",
+      "integrity": "Static source inspection; no execution"
+    },
+    {
+      "id": "minilm",
+      "name": "MiniLM semantic model",
+      "layer": "runtime",
+      "group": "Runtime",
+      "description": "sentence-transformers/all-MiniLM-L6-v2 represents text meaning for similarity comparisons. Production construction explicitly selects the sentence-transformer backend.",
+      "consumer": "Context suggestion/reranking; frozen Recommendation Core",
+      "why": "Similarity supports ranking; repository metadata, graph relationships and compatibility checks retain their separate roles.",
+      "count": null,
+      "countLabel": "",
+      "headers": [],
+      "statuses": {},
+      "sample": [],
+      "key": "Not an entity repository",
+      "path": "src/recommendation_system/infrastructure/runtime/application_factory.py",
+      "sha": "",
+      "integrity": "Static source inspection; no execution"
+    },
+    {
+      "id": "provider_config",
+      "name": "Generation profiles + instructions",
+      "layer": "runtime",
+      "group": "Generation boundary",
+      "description": "Code-defined profile/model settings, provider-specific timeout handling and versioned instructions control generation. Credentials and private configuration values are excluded from this artifact.",
+      "consumer": "Generation provider adapters",
+      "why": "Generation configuration does not change the recommended concept or the governed material/framework authority.",
+      "count": null,
+      "countLabel": "",
+      "headers": [],
+      "statuses": {},
+      "sample": [],
+      "key": "Not an entity repository",
+      "path": "src/recommendation_system/educator_kit/",
+      "sha": "",
+      "integrity": "Static source inspection; no execution"
+    },
+    {
+      "id": "generation_packet",
+      "name": "Full packet → semantic brief",
+      "layer": "runtime",
+      "group": "Generation boundary",
+      "description": "The complete same-execution KitGenerationPacket remains authority. A semantic projection sends generation-relevant meaning; system-owned provenance is assembled from the original packet.",
+      "consumer": "Provider input projection; deterministic assembly; KitValidator",
+      "why": "Payload slimming is not a change in factual authority.",
+      "count": null,
+      "countLabel": "",
+      "headers": [],
+      "statuses": {},
+      "sample": [],
+      "key": "Not an entity repository",
+      "path": "src/recommendation_system/educator_kit/",
+      "sha": "",
+      "integrity": "Static source inspection; no execution"
+    },
+    {
+      "id": "kit_request_recovery_event",
+      "name": "Kit Request Recovery Event",
+      "layer": "runtime",
+      "group": "Operational persistence",
+      "description": "Audits explicit recovery of interrupted requests. Recovery does not itself retry generation.",
+      "consumer": "SQLite persistence adapters; normal service read/replay paths",
+      "why": "Preserves what actually happened, independently of current repository versions.",
+      "count": null,
+      "countLabel": "row count not read",
+      "headers": [
+        "recovery_event_id TEXT",
+        "kit_request_id TEXT",
+        "previous_state TEXT",
+        "new_state TEXT",
+        "recovery_reason_code TEXT",
+        "recovery_reason_text TEXT",
+        "recovered_at_utc TEXT"
+      ],
+      "key": "recovery_event_id TEXT",
+      "statuses": {},
+      "sample": [],
+      "path": "src/recommendation_system/infrastructure/schema/kit_recovery_schema_v3.sql",
+      "sha": "c96e540187a9fa07c5e8904915dc4d9c6f36d969a065ee972639f5ceb56376cf",
+      "integrity": "Schema definition only; no operational database opened"
+    },
+    {
+      "id": "kit_request_ledger",
+      "name": "Kit Request Ledger",
+      "layer": "runtime",
+      "group": "Operational persistence",
+      "description": "Tracks Kit request state, ownership and completed replay. A running duplicate cannot start another provider call.",
+      "consumer": "SQLite persistence adapters; normal service read/replay paths",
+      "why": "Preserves what actually happened, independently of current repository versions.",
+      "count": null,
+      "countLabel": "row count not read",
+      "headers": [
+        "kit_request_id TEXT",
+        "kit_request_hash TEXT",
+        "state TEXT",
+        "owner_token TEXT",
+        "started_at_utc TEXT",
+        "updated_at_utc TEXT",
+        "result_payload_json TEXT",
+        "result_sha256 TEXT",
+        "technical_error_json TEXT",
+        "kit_snapshot_id TEXT"
+      ],
+      "key": "kit_request_id TEXT",
+      "statuses": {},
+      "sample": [],
+      "path": "src/recommendation_system/infrastructure/schema/kit_schema_v2.sql",
+      "sha": "61878b17cb51c9970e0f16110669198d4bf604bcb036ec79985895c2e2e1279f",
+      "integrity": "Schema definition only; no operational database opened"
+    },
+    {
+      "id": "educator_kit_snapshot",
+      "name": "Educator Kit Snapshot",
+      "layer": "runtime",
+      "group": "Operational persistence",
+      "description": "Immutable raw/assembled Kit content, contract, material, frameworks, provider provenance and validation result.",
+      "consumer": "SQLite persistence adapters; normal service read/replay paths",
+      "why": "Preserves what actually happened, independently of current repository versions.",
+      "count": null,
+      "countLabel": "row count not read",
+      "headers": [
+        "kit_snapshot_id TEXT",
+        "kit_request_id TEXT",
+        "kit_request_hash TEXT",
+        "recommendation_event_id TEXT",
+        "context_snapshot_id TEXT",
+        "selected_template_id TEXT",
+        "requested_template_id TEXT",
+        "kit_generation_status TEXT",
+        "validation_status TEXT",
+        "material_source_mode TEXT",
+        "teaching_context_json TEXT",
+        "alternative_template_summaries_json TEXT",
+        "resolved_contract_json TEXT",
+        "teaching_material_json TEXT",
+        "framework_context_json TEXT",
+        "generation_provenance_json TEXT",
+        "kit_payload_json TEXT",
+        "validation_json TEXT",
+        "actor_scope_hash TEXT",
+        "created_at_utc TEXT"
+      ],
+      "key": "kit_snapshot_id TEXT",
+      "statuses": {},
+      "sample": [],
+      "path": "src/recommendation_system/infrastructure/schema/kit_schema_v2.sql",
+      "sha": "61878b17cb51c9970e0f16110669198d4bf604bcb036ec79985895c2e2e1279f",
+      "integrity": "Schema definition only; no operational database opened"
+    },
+    {
+      "id": "persistence_schema_metadata",
+      "name": "Persistence Schema Metadata",
+      "layer": "runtime",
+      "group": "Operational persistence",
+      "description": "Records the explicit applied schema history. It is infrastructure metadata, not teaching content.",
+      "consumer": "SQLite persistence adapters; normal service read/replay paths",
+      "why": "Preserves what actually happened, independently of current repository versions.",
+      "count": null,
+      "countLabel": "row count not read",
+      "headers": [
+        "schema_version INTEGER",
+        "applied_at_utc TEXT",
+        "application_version TEXT"
+      ],
+      "key": "schema_version INTEGER",
+      "statuses": {},
+      "sample": [],
+      "path": "src/recommendation_system/infrastructure/schema/persistence_schema.sql",
+      "sha": "0b00deb7a6b5b1bb0dcd5b75e51f2d3794fa78fe395751c4c8a5fafc2b090987",
+      "integrity": "Schema definition only; no operational database opened"
+    },
+    {
+      "id": "recommendation_request_ledger",
+      "name": "Recommendation Request Ledger",
+      "layer": "runtime",
+      "group": "Operational persistence",
+      "description": "Tracks recommendation request identity and state to prevent duplicate core execution.",
+      "consumer": "SQLite persistence adapters; normal service read/replay paths",
+      "why": "Preserves what actually happened, independently of current repository versions.",
+      "count": null,
+      "countLabel": "row count not read",
+      "headers": [
+        "request_id TEXT",
+        "request_fingerprint_sha256 TEXT",
+        "state TEXT",
+        "started_at_utc TEXT",
+        "updated_at_utc TEXT",
+        "completed_at_utc TEXT",
+        "retryable INTEGER",
+        "technical_error_json TEXT",
+        "recommendation_event_id TEXT",
+        "recommendation_context_snapshot_id TEXT"
+      ],
+      "key": "request_id TEXT",
+      "statuses": {},
+      "sample": [],
+      "path": "src/recommendation_system/infrastructure/schema/persistence_schema.sql",
+      "sha": "0b00deb7a6b5b1bb0dcd5b75e51f2d3794fa78fe395751c4c8a5fafc2b090987",
+      "integrity": "Schema definition only; no operational database opened"
+    },
+    {
+      "id": "recommendation_context_snapshot",
+      "name": "Recommendation Context Snapshot",
+      "layer": "runtime",
+      "group": "Operational persistence",
+      "description": "Immutable saved recommendation inputs and execution provenance.",
+      "consumer": "SQLite persistence adapters; normal service read/replay paths",
+      "why": "Preserves what actually happened, independently of current repository versions.",
+      "count": null,
+      "countLabel": "row count not read",
+      "headers": [
+        "recommendation_context_snapshot_id TEXT",
+        "request_id TEXT",
+        "created_at_utc TEXT",
+        "interface_version TEXT",
+        "course_id TEXT",
+        "module_id TEXT",
+        "subtopic_id TEXT",
+        "application_context_source TEXT",
+        "application_context_text TEXT",
+        "accepted_context_candidate_id TEXT",
+        "request_payload_json TEXT",
+        "snapshot_schema_version TEXT",
+        "snapshot_sha256 TEXT"
+      ],
+      "key": "recommendation_context_snapshot_id TEXT",
+      "statuses": {},
+      "sample": [],
+      "path": "src/recommendation_system/infrastructure/schema/persistence_schema.sql",
+      "sha": "0b00deb7a6b5b1bb0dcd5b75e51f2d3794fa78fe395751c4c8a5fafc2b090987",
+      "integrity": "Schema definition only; no operational database opened"
+    },
+    {
+      "id": "recommendation_event",
+      "name": "Recommendation Event",
+      "layer": "runtime",
+      "group": "Operational persistence",
+      "description": "Immutable completed recommendation linked to its exact input snapshot, with stored result and available trace.",
+      "consumer": "SQLite persistence adapters; normal service read/replay paths",
+      "why": "Preserves what actually happened, independently of current repository versions.",
+      "count": null,
+      "countLabel": "row count not read",
+      "headers": [
+        "recommendation_event_id TEXT",
+        "request_id TEXT",
+        "recommendation_context_snapshot_id TEXT",
+        "created_at_utc TEXT",
+        "recommendation_status TEXT",
+        "primary_scr_id TEXT",
+        "abstention_reason TEXT",
+        "result_payload_json TEXT",
+        "trace_payload_json TEXT",
+        "version_provenance_json TEXT",
+        "execution_audit_json TEXT",
+        "event_schema_version TEXT",
+        "event_sha256 TEXT"
+      ],
+      "key": "recommendation_event_id TEXT",
+      "statuses": {},
+      "sample": [],
+      "path": "src/recommendation_system/infrastructure/schema/persistence_schema.sql",
+      "sha": "0b00deb7a6b5b1bb0dcd5b75e51f2d3794fa78fe395751c4c8a5fafc2b090987",
+      "integrity": "Schema definition only; no operational database opened"
+    }
+  ],
+  "edges": [
+    {
+      "a": "06_kfr.csv",
+      "b": "04_kcr.csv",
+      "label": "ACTS_ON_KCR",
+      "count": 252,
+      "kind": "Recorded directed relationship",
+      "example": {
+        ":START_ID": "KFR_000001",
+        ":END_ID": "KCR_000013",
+        ":TYPE": "ACTS_ON_KCR"
+      }
+    },
+    {
+      "a": "05_kpr.csv",
+      "b": "04_kcr.csv",
+      "label": "APPLIES_TO_KCR",
+      "count": 252,
+      "kind": "Recorded directed relationship",
+      "example": {
+        ":START_ID": "KPR_000001",
+        ":END_ID": "KCR_000013",
+        ":TYPE": "APPLIES_TO_KCR"
+      }
+    },
+    {
+      "a": "11_sdg_target.csv",
+      "b": "10_sdg_goal.csv",
+      "label": "BELONGS_TO_SDG",
+      "count": 169,
+      "kind": "Recorded directed relationship",
+      "example": {
+        ":START_ID": "SDG_TARGET_10_1",
+        ":END_ID": "SDG_GOAL_10",
+        ":TYPE": "BELONGS_TO_SDG"
+      }
+    },
+    {
+      "a": "01_course.csv",
+      "b": "02_module.csv",
+      "label": "CONTAINS_MODULE",
+      "count": 373,
+      "kind": "Recorded directed relationship",
+      "example": {
+        ":START_ID": "COURSE_001",
+        ":END_ID": "MOD_COURSE_001_M01",
+        ":TYPE": "CONTAINS_MODULE"
+      }
+    },
+    {
+      "a": "02_module.csv",
+      "b": "03_subtopic.csv",
+      "label": "CONTAINS_SUBTOPIC",
+      "count": 1338,
+      "kind": "Recorded directed relationship",
+      "example": {
+        ":START_ID": "MOD_COURSE_001_M01",
+        ":END_ID": "SUB_COURSE_001_M01_S01",
+        ":TYPE": "CONTAINS_SUBTOPIC"
+      }
+    },
+    {
+      "a": "09_application_context.csv",
+      "b": "07_scr.csv",
+      "label": "EVIDENCE_SUPPORTS",
+      "count": 41,
+      "kind": "Recorded directed relationship",
+      "example": {
+        ":START_ID": "AC_000001",
+        ":END_ID": "SCR_0013",
+        ":TYPE": "EVIDENCE_SUPPORTS"
+      }
+    },
+    {
+      "a": "08_guardrail.csv",
+      "b": "01_course.csv",
+      "label": "GOVERNS_COURSE",
+      "count": 60,
+      "kind": "Recorded directed relationship",
+      "example": {
+        ":START_ID": "GR_COURSE_001",
+        ":END_ID": "COURSE_001",
+        ":TYPE": "GOVERNS_COURSE"
+      }
+    },
+    {
+      "a": "08_guardrail.csv",
+      "b": "02_module.csv",
+      "label": "GOVERNS_MODULE",
+      "count": 373,
+      "kind": "Recorded directed relationship",
+      "example": {
+        ":START_ID": "GR_MOD_COURSE_001_M01",
+        ":END_ID": "MOD_COURSE_001_M01",
+        ":TYPE": "GOVERNS_MODULE"
+      }
+    },
+    {
+      "a": "08_guardrail.csv",
+      "b": "03_subtopic.csv",
+      "label": "GOVERNS_SUBTOPIC",
+      "count": 1338,
+      "kind": "Recorded directed relationship",
+      "example": {
+        ":START_ID": "GR_SUB_COURSE_001_M01_S01",
+        ":END_ID": "SUB_COURSE_001_M01_S01",
+        ":TYPE": "GOVERNS_SUBTOPIC"
+      }
+    },
+    {
+      "a": "04_kcr.csv",
+      "b": "04_kcr.csv",
+      "label": "IS_SUBCONCEPT_OF_KCR",
+      "count": 2,
+      "kind": "Recorded directed relationship",
+      "example": {
+        ":START_ID": "KCR_000005",
+        ":END_ID": "KCR_000014",
+        ":TYPE": "IS_SUBCONCEPT_OF_KCR"
+      }
+    },
+    {
+      "a": "03_subtopic.csv",
+      "b": "04_kcr.csv",
+      "label": "MAPS_TO_KCR",
+      "count": 1338,
+      "kind": "Recorded directed relationship",
+      "example": {
+        ":START_ID": "SUB_COURSE_001_M01_S01",
+        ":END_ID": "KCR_000001",
+        ":TYPE": "MAPS_TO_KCR"
+      }
+    },
+    {
+      "a": "12_sdg_indicator.csv",
+      "b": "11_sdg_target.csv",
+      "label": "MEASURES_TARGET",
+      "count": 251,
+      "kind": "Recorded directed relationship",
+      "example": {
+        ":START_ID": "SDG_INDICATOR_10_1_1",
+        ":END_ID": "SDG_TARGET_10_1",
+        ":TYPE": "MEASURES_TARGET"
+      }
+    },
+    {
+      "a": "07_scr.csv",
+      "b": "07_scr.csv",
+      "label": "MERGED_INTO",
+      "count": 1,
+      "kind": "Recorded directed relationship",
+      "example": {
+        ":START_ID": "SCR_0056",
+        ":END_ID": "SCR_0090",
+        ":TYPE": "MERGED_INTO"
+      }
+    },
+    {
+      "a": "13_esd_objective.csv",
+      "b": "10_sdg_goal.csv",
+      "label": "OBJECTIVE_FOR_SDG",
+      "count": 255,
+      "kind": "Recorded directed relationship",
+      "example": {
+        ":START_ID": "ESD_SDG01_BEH_01",
+        ":END_ID": "SDG_GOAL_01",
+        ":TYPE": "OBJECTIVE_FOR_SDG"
+      }
+    },
+    {
+      "a": "06_kfr.csv",
+      "b": "05_kpr.csv",
+      "label": "OPERATIONALIZES",
+      "count": 136,
+      "kind": "Recorded directed relationship",
+      "example": {
+        ":START_ID": "KFR_000001",
+        ":END_ID": "KPR_000001",
+        ":TYPE": "OPERATIONALIZES"
+      }
+    },
+    {
+      "a": "15_cf_knowledge.csv",
+      "b": "10_sdg_goal.csv",
+      "label": "OUTCOME_FOR_SDG",
+      "count": 1089,
+      "kind": "Recorded directed relationship",
+      "example": {
+        ":START_ID": "CFK_SDG01_ADULT_001",
+        ":END_ID": "SDG_GOAL_01",
+        ":TYPE": "OUTCOME_FOR_SDG"
+      }
+    },
+    {
+      "a": "16_cf_skill.csv",
+      "b": "10_sdg_goal.csv",
+      "label": "OUTCOME_FOR_SDG",
+      "count": 1026,
+      "kind": "Recorded directed relationship",
+      "example": {
+        ":START_ID": "CFS_SDG01_ADULT_001",
+        ":END_ID": "SDG_GOAL_01",
+        ":TYPE": "OUTCOME_FOR_SDG"
+      }
+    },
+    {
+      "a": "17_cf_value.csv",
+      "b": "10_sdg_goal.csv",
+      "label": "OUTCOME_FOR_SDG",
+      "count": 986,
+      "kind": "Recorded directed relationship",
+      "example": {
+        ":START_ID": "CFV_SDG01_ADULT_001",
+        ":END_ID": "SDG_GOAL_01",
+        ":TYPE": "OUTCOME_FOR_SDG"
+      }
+    },
+    {
+      "a": "07_scr.csv",
+      "b": "12_sdg_indicator.csv",
+      "label": "REFERENCES_SDG_INDICATOR",
+      "count": 193,
+      "kind": "Recorded directed relationship",
+      "example": {
+        ":START_ID": "SCR_0001",
+        ":END_ID": "SDG_INDICATOR_15_5_1",
+        ":TYPE": "REFERENCES_SDG_INDICATOR"
+      }
+    },
+    {
+      "a": "05_kpr.csv",
+      "b": "05_kpr.csv",
+      "label": "RELATED_TO_KPR",
+      "count": 81,
+      "kind": "Recorded directed relationship",
+      "example": {
+        ":START_ID": "KPR_000002",
+        ":END_ID": "KPR_000145",
+        ":TYPE": "RELATED_TO_KPR"
+      }
+    },
+    {
+      "a": "07_scr.csv",
+      "b": "07_scr.csv",
+      "label": "RELATED_TO_SCR",
+      "count": 218,
+      "kind": "Recorded directed relationship",
+      "example": {
+        ":START_ID": "SCR_0001",
+        ":END_ID": "SCR_0017",
+        ":TYPE": "RELATED_TO_SCR"
+      }
+    },
+    {
+      "a": "04_kcr.csv",
+      "b": "04_kcr.csv",
+      "label": "REQUIRES_KNOWLEDGE_OF",
+      "count": 175,
+      "kind": "Recorded directed relationship",
+      "example": {
+        ":START_ID": "KCR_000002",
+        ":END_ID": "KCR_000001",
+        ":TYPE": "REQUIRES_KNOWLEDGE_OF"
+      }
+    },
+    {
+      "a": "05_kpr.csv",
+      "b": "05_kpr.csv",
+      "label": "REQUIRES_PRINCIPLE",
+      "count": 24,
+      "kind": "Recorded directed relationship",
+      "example": {
+        ":START_ID": "KPR_000006",
+        ":END_ID": "KPR_000005",
+        ":TYPE": "REQUIRES_PRINCIPLE"
+      }
+    },
+    {
+      "a": "09_application_context.csv",
+      "b": "11_sdg_target.csv",
+      "label": "SUPPORTS_SDG_TARGET",
+      "count": 110,
+      "kind": "Recorded directed relationship",
+      "example": {
+        ":START_ID": "AC_000001",
+        ":END_ID": "SDG_TARGET_12_5",
+        ":TYPE": "SUPPORTS_SDG_TARGET"
+      }
+    },
+    {
+      "a": "07_scr.csv",
+      "b": "11_sdg_target.csv",
+      "label": "SUPPORTS_SDG_TARGET",
+      "count": 266,
+      "kind": "Recorded directed relationship",
+      "example": {
+        ":START_ID": "SCR_0001",
+        ":END_ID": "SDG_TARGET_15_5",
+        ":TYPE": "SUPPORTS_SDG_TARGET"
+      }
+    },
+    {
+      "a": "07_scr.csv",
+      "b": "SCR_Pedagogical_Template",
+      "label": "SCR_ID",
+      "kind": "Identifier join / resolver input"
+    },
+    {
+      "a": "SCR_Pedagogical_Template",
+      "b": "Template_Contract_Index",
+      "label": "Template_ID",
+      "kind": "Identifier join / resolver input"
+    },
+    {
+      "a": "Template_Contract_Index",
+      "b": "Template_Output_Element_Contract",
+      "label": "Kit_Contract_ID",
+      "kind": "Identifier join / resolver input"
+    },
+    {
+      "a": "Teaching_Reference",
+      "b": "Reference_SCR_Use",
+      "label": "Reference_ID",
+      "kind": "Identifier join / resolver input"
+    },
+    {
+      "a": "07_scr.csv",
+      "b": "Reference_SCR_Use",
+      "label": "SCR_ID",
+      "kind": "Identifier join / resolver input"
+    },
+    {
+      "a": "Teaching_Reference",
+      "b": "Teaching_Case_Input",
+      "label": "Reference_ID",
+      "kind": "Identifier join / resolver input"
+    },
+    {
+      "a": "07_scr.csv",
+      "b": "SCR_Framework_Mapping",
+      "label": "SCR_ID",
+      "kind": "Identifier join / resolver input"
+    },
+    {
+      "a": "SCR_Pedagogical_Template",
+      "b": "Template_Framework_Resolver",
+      "label": "Template_ID",
+      "kind": "Identifier join / resolver input"
+    },
+    {
+      "a": "SCR_Framework_Mapping",
+      "b": "Template_Framework_Resolver",
+      "label": "SCR_ID + Framework_Element_ID",
+      "kind": "Identifier join / resolver input"
+    },
+    {
+      "a": "Framework_Role_Matrix",
+      "b": "Template_Framework_Resolver",
+      "label": "framework family / category / element type",
+      "kind": "Identifier join / resolver input"
+    },
+    {
+      "a": "material_rules",
+      "b": "Reference_SCR_Use",
+      "label": "condition classification + source identity",
+      "kind": "Identifier join / resolver input"
+    },
+    {
+      "a": "contract_release",
+      "b": "Template_Contract_Index",
+      "label": "updated Template_ID headers",
+      "kind": "Identifier join / resolver input"
+    },
+    {
+      "a": "contract_release",
+      "b": "Template_Output_Element_Contract",
+      "label": "added Element_Contract_ID rows",
+      "kind": "Identifier join / resolver input"
+    },
+    {
+      "a": "10_sdg_goal.csv",
+      "b": "Template_Framework_Resolver",
+      "label": "Framework_Element_ID → canonical source row",
+      "kind": "Identifier join / resolver input"
+    },
+    {
+      "a": "11_sdg_target.csv",
+      "b": "Template_Framework_Resolver",
+      "label": "Framework_Element_ID → canonical source row",
+      "kind": "Identifier join / resolver input"
+    },
+    {
+      "a": "12_sdg_indicator.csv",
+      "b": "Template_Framework_Resolver",
+      "label": "Framework_Element_ID → canonical source row",
+      "kind": "Identifier join / resolver input"
+    },
+    {
+      "a": "13_esd_objective.csv",
+      "b": "Template_Framework_Resolver",
+      "label": "Framework_Element_ID → canonical source row",
+      "kind": "Identifier join / resolver input"
+    },
+    {
+      "a": "14_esd_competency.csv",
+      "b": "Template_Framework_Resolver",
+      "label": "Framework_Element_ID → canonical source row",
+      "kind": "Identifier join / resolver input"
+    },
+    {
+      "a": "15_cf_knowledge.csv",
+      "b": "Template_Framework_Resolver",
+      "label": "Framework_Element_ID → canonical source row",
+      "kind": "Identifier join / resolver input"
+    },
+    {
+      "a": "16_cf_skill.csv",
+      "b": "Template_Framework_Resolver",
+      "label": "Framework_Element_ID → canonical source row",
+      "kind": "Identifier join / resolver input"
+    },
+    {
+      "a": "17_cf_value.csv",
+      "b": "Template_Framework_Resolver",
+      "label": "Framework_Element_ID → canonical source row",
+      "kind": "Identifier join / resolver input"
+    },
+    {
+      "a": "18_cf_competency.csv",
+      "b": "Template_Framework_Resolver",
+      "label": "Framework_Element_ID → canonical source row",
+      "kind": "Identifier join / resolver input"
+    },
+    {
+      "a": "relationships.csv",
+      "b": "compiled",
+      "label": "compile directed graph",
+      "kind": "Runtime handoff / persisted reference"
+    },
+    {
+      "a": "04_kcr.csv",
+      "b": "compiled",
+      "label": "compile node fields / corpus",
+      "kind": "Runtime handoff / persisted reference"
+    },
+    {
+      "a": "compiled",
+      "b": "minilm",
+      "label": "semantic corpus + explicit backend",
+      "kind": "Runtime handoff / persisted reference"
+    },
+    {
+      "a": "minilm",
+      "b": "09_application_context.csv",
+      "label": "semantic comparison against contexts",
+      "kind": "Runtime handoff / persisted reference"
+    },
+    {
+      "a": "minilm",
+      "b": "07_scr.csv",
+      "label": "semantic ranking evidence",
+      "kind": "Runtime handoff / persisted reference"
+    },
+    {
+      "a": "recommendation_context_snapshot",
+      "b": "recommendation_event",
+      "label": "recommendation_context_snapshot_id",
+      "kind": "Runtime handoff / persisted reference"
+    },
+    {
+      "a": "recommendation_event",
+      "b": "educator_kit_snapshot",
+      "label": "recommendation_event_id",
+      "kind": "Runtime handoff / persisted reference"
+    },
+    {
+      "a": "recommendation_context_snapshot",
+      "b": "educator_kit_snapshot",
+      "label": "context_snapshot_id",
+      "kind": "Runtime handoff / persisted reference"
+    },
+    {
+      "a": "kit_request_ledger",
+      "b": "educator_kit_snapshot",
+      "label": "kit_request_id / kit_snapshot_id",
+      "kind": "Runtime handoff / persisted reference"
+    },
+    {
+      "a": "kit_request_ledger",
+      "b": "kit_request_recovery_event",
+      "label": "kit_request_id",
+      "kind": "Runtime handoff / persisted reference"
+    },
+    {
+      "a": "recommendation_request_ledger",
+      "b": "recommendation_event",
+      "label": "request_id",
+      "kind": "Runtime handoff / persisted reference"
+    },
+    {
+      "a": "Template_Output_Element_Contract",
+      "b": "generation_packet",
+      "label": "resolved output requirements",
+      "kind": "Runtime handoff / persisted reference"
+    },
+    {
+      "a": "Teaching_Case_Input",
+      "b": "generation_packet",
+      "label": "resolved material authority",
+      "kind": "Runtime handoff / persisted reference"
+    },
+    {
+      "a": "Template_Framework_Resolver",
+      "b": "generation_packet",
+      "label": "resolved framework authority",
+      "kind": "Runtime handoff / persisted reference"
+    },
+    {
+      "a": "generation_packet",
+      "b": "provider_config",
+      "label": "semantic brief + selected profile",
+      "kind": "Runtime handoff / persisted reference"
+    },
+    {
+      "a": "generation_packet",
+      "b": "educator_kit_snapshot",
+      "label": "same-execution authority + result",
+      "kind": "Runtime handoff / persisted reference"
+    }
+  ],
+  "meta": {
+    "csv_files": 19,
+    "nodes": 9033,
+    "edges": 10347,
+    "types": 22,
+    "hash_matches": 19,
+    "tables": 9,
+    "date": "14 October 2026",
+    "compiledAt": "2026-09-26T09:09:06.038291+00:00"
+  }
+};const phrases={"ACTS_ON_KCR": "acts on a knowledge concept", "APPLIES_TO_KCR": "principle applies to concept", "BELONGS_TO_SDG": "target belongs to goal", "CONTAINS_MODULE": "course contains module", "CONTAINS_SUBTOPIC": "module contains topic", "EVIDENCE_SUPPORTS": "context evidence supports concept", "GOVERNS_COURSE": "constrains course scope", "GOVERNS_MODULE": "constrains module scope", "GOVERNS_SUBTOPIC": "constrains topic scope", "IS_SUBCONCEPT_OF_KCR": "is a more specific concept of", "MAPS_TO_KCR": "topic maps to technical concept", "MEASURES_TARGET": "indicator measures target", "MERGED_INTO": "merged into retained identifier", "OBJECTIVE_FOR_SDG": "learning objective for goal", "OPERATIONALIZES": "operationalizes", "OUTCOME_FOR_SDG": "framework outcome for goal", "REFERENCES_SDG_INDICATOR": "references an SDG indicator", "RELATED_TO_KPR": "related to knowledge principle", "RELATED_TO_SCR": "related to sustainability concept", "REQUIRES_KNOWLEDGE_OF": "requires knowledge of", "REQUIRES_PRINCIPLE": "requires principle", "SUPPORTS_SDG_TARGET": "supports SDG target"};const byId=Object.fromEntries(DATA.items.map(x=>[x.id,x]));let mode='knowledge',selected='03_subtopic.csv',pane='example';const $=id=>document.getElementById(id);const esc=t=>String(t??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const fmt=n=>Number(n).toLocaleString();const summaries={knowledge:'Curriculum anchors the technical topic. Recorded concepts, principles and functions support recommendation. Framework data remains a separate alignment dimension.',kit:'Teaching design is governed before generation: select a template, resolve its required outputs, admit usable material and determine authorized framework use.',runtime:'CSV repositories remain source authority. Compiled graph/model resources support execution; SQLite records decisions and immutable Kits. Provider output does not rewrite these sources.'};const titles={knowledge:'The knowledge network',kit:'Teaching design and evidence',runtime:'Execution and durable records'};function catalogue(){const q=$('search').value.toLowerCase();const found=DATA.items.filter(x=>x.layer===mode&&[x.name,x.id,x.key,...x.headers].join(' ').toLowerCase().includes(q));$('catalog').innerHTML='';$('maptitle').textContent=titles[mode];$('mapcount').textContent=found.length+' sources / structures';$('summary').textContent=summaries[mode];document.querySelectorAll('[data-mode]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.mode===mode));for(const g of [...new Set(found.map(x=>x.group))]){const box=document.createElement('div');box.className='group';box.innerHTML='<div class="gtitle">'+esc(g)+'</div><div class="nodes"></div>';for(const x of found.filter(x=>x.group===g)){const b=document.createElement('button');b.className='node';b.setAttribute('aria-pressed',x.id===selected);b.setAttribute('aria-label',x.name);b.innerHTML='<span class="icon">'+(x.layer==='knowledge'?'KG':x.layer==='kit'?'KIT':'SYS')+'</span><span><strong>'+esc(x.name)+'</strong><small>'+(x.count===null?'Source / schema inspection':fmt(x.count)+' '+x.countLabel)+'</small></span>';b.onclick=()=>select(x.id,true);box.querySelector('.nodes').appendChild(b)}$('catalog').appendChild(box)}if(!found.length)$('catalog').innerHTML='<div class="empty">No matching source in this layer. Try another layer or a shorter term.</div>'}
+function select(id,focus=false){selected=id;mode=byId[id].layer;catalogue();drawNetwork();const x=byId[id];$('family').textContent=x.group+' / '+(x.layer==='knowledge'?'Canonical CSV':x.layer==='kit'?'Governed teaching data':'Runtime / persistence');$('name').textContent=x.name;$('facts').innerHTML='<span class="pill">'+(x.count===null?'No live rows queried':fmt(x.count)+' '+x.countLabel)+'</span><span class="pill">Read-only evidence</span>';$('description').textContent=x.description;$('why').textContent='Why it matters · '+x.why;$('consumer').textContent=x.consumer;const links=DATA.edges.filter(e=>e.a===id||e.b===id);$('joins').innerHTML='';for(const e of links){const div=document.createElement('div');div.className='join';div.innerHTML='<div class="jointype">'+esc(e.kind)+'</div><div class="joinpath"><button class="entity" data-id="'+esc(e.a)+'">'+esc(byId[e.a]?.name||e.a)+'</button><span class="rel">— '+esc(phrases[e.label]||e.label)+' →</span><button class="entity" data-id="'+esc(e.b)+'">'+esc(byId[e.b]?.name||e.b)+'</button>'+(e.count?'<span class="count">'+fmt(e.count)+' links</span>':'')+'</div>'+(e.example?'<div class="joinexample">'+esc(e.label)+' · Actual row: '+esc(e.example[':START_ID'])+' → '+esc(e.example[':END_ID'])+'</div>':'');div.querySelectorAll('[data-id]').forEach(b=>b.onclick=()=>{if(byId[b.dataset.id]){$('search').value='';select(b.dataset.id,true)}});$('joins').appendChild(div)}if(!links.length)$('joins').innerHTML='<p class="subtle">No connection is drawn here beyond the inspected source evidence. See consumer and schema details.</p>';renderPane();if(focus&&window.innerWidth<=900)$('detail').scrollIntoView({behavior:'auto',block:'start'})}
+
+function drawNetwork(){const nodes=DATA.items.filter(x=>x.layer===mode);const groups=[...new Set(nodes.map(x=>x.group))];const cols=mode==='knowledge'?3:2;const w=690,gap=18,pad=18,cw=(w-pad*2-gap*(cols-1))/cols;const coords={};const groupPos=[];let yrow=28;for(let r=0;r<groups.length;r+=cols){let tallest=0;for(let c=0;c<cols&&r+c<groups.length;c++){const g=groups[r+c],members=nodes.filter(x=>x.group===g);const x=pad+c*(cw+gap);groupPos.push({x,y:yrow,g});members.forEach((n,j)=>coords[n.id]={x,y:yrow+20+j*65,w:cw,h:52});tallest=Math.max(tallest,20+members.length*65)}yrow+=tallest+25}let svg='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 '+w+' '+(yrow+4)+'" role="group" aria-label="Selectable sources and directed connections"><defs><marker id="arr" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="#4b7b66"/></marker></defs>';const relevant=DATA.edges.filter(e=>coords[e.a]&&coords[e.b]&&(e.a===selected||e.b===selected));for(const e of relevant){const a=coords[e.a],b=coords[e.b];const ax=a.x+a.w/2,ay=a.y+a.h/2,bx=b.x+b.w/2,by=b.y+b.h/2;const sy=by>ay?a.y+a.h:a.y,ty=by>ay?b.y:b.y+b.h;svg+='<path d="M'+ax+' '+sy+' C'+ax+' '+((sy+ty)/2)+' '+bx+' '+((sy+ty)/2)+' '+bx+' '+ty+'" fill="none" stroke="#628c73" stroke-width="1.5" '+(e.kind==='Recorded directed relationship'?'':'stroke-dasharray="4 4"')+' marker-end="url(#arr)"><title>'+esc(e.label)+'</title></path>'}for(const g of groupPos)svg+='<text x="'+g.x+'" y="'+g.y+'" font-size="10" fill="#64776b" font-weight="600">'+esc(g.g.toUpperCase())+'</text>';for(const n of nodes){const c=coords[n.id],sel=n.id===selected,related=relevant.some(e=>e.a===n.id||e.b===n.id);const words=n.name.split(' ');let lines=[''];for(const word of words){if((lines[lines.length-1]+' '+word).length>23)lines.push(word);else lines[lines.length-1]+=(lines[lines.length-1]?' ':'')+word}svg+='<g class="mapnode" tabindex="0" role="button" aria-label="Map: '+esc(n.name)+'" data-node="'+esc(n.id)+'"><rect x="'+c.x+'" y="'+c.y+'" width="'+c.w+'" height="'+c.h+'" rx="6" fill="'+(sel?'#e5f0e8':related?'#f2f6ec':'white')+'" stroke="'+(sel?'#26705c':'#d6e0d6')+'" stroke-width="'+(sel?2:1)+'"/>';lines.slice(0,2).forEach((l,j)=>svg+='<text x="'+(c.x+10)+'" y="'+(c.y+17+j*13)+'" font-size="11" fill="#203c36" font-weight="'+(sel?650:500)+'">'+esc(l)+'</text>');svg+='<text x="'+(c.x+10)+'" y="'+(c.y+43)+'" font-size="9" fill="#6b7e70">'+(n.count===null?'source / schema':fmt(n.count)+' '+n.countLabel)+'</text></g>'}svg+='</svg>';$('network').innerHTML=svg;$('network').querySelectorAll('[data-node]').forEach(n=>{n.onclick=()=>select(n.dataset.node,true);n.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();select(n.dataset.node,true)}}})}
+function renderPane(){const x=byId[selected];document.querySelectorAll('[data-pane]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.pane===pane));const p=$('pane');if(pane==='schema'){p.innerHTML='<p class="subtle">Identifier / join key: <strong>'+esc(x.key)+'</strong></p><div class="schema">'+x.headers.map(f=>'<span class="field">'+esc(f)+'</span>').join('')+'</div>';if(!x.headers.length)p.innerHTML+='<p class="subtle">This is a runtime component or artifact, not a row-based repository.</p>'}else if(pane==='status'){p.innerHTML=Object.keys(x.statuses).length?Object.entries(x.statuses).map(([k,v])=>'<h4>'+esc(k)+'</h4><div class="facts">'+Object.entries(v).map(([a,n])=>'<span class="pill">'+esc(a||'(blank)')+' · '+fmt(n)+'</span>').join('')+'</div>').join(''):'<p class="subtle">No status-value inventory applies to this source. SQL-defined states are visible in the schema source; operational counts were not queried.</p>'}else if(pane==='source'){p.innerHTML='<p class="hash">'+esc(x.path)+'</p><p>'+esc(x.integrity)+'</p>'+(x.sha?'<div class="subtle">SHA-256 of source file</div><p class="hash">'+esc(x.sha)+'</p>':'')+(x.sources?'<div class="subtle">Workbook provenance found in effective rows</div><ul>'+x.sources.map(a=>'<li class="hash">'+esc(a)+'</li>').join('')+'</ul>':'')+(x.layer==='kit'?'<p class="subtle">Counts are from static current-source composition. The output-contract base is retained; approved v0.3 additions are included in effective counts. This is not an application execution.</p>':'')}else{p.innerHTML=x.sample.length?'<p class="subtle">One actual record; exact values retained. This sample illustrates the schema, not an automatically selected recommendation or template.</p>'+x.sample.map(r=>'<div class="tablewrap"><table><tbody>'+Object.entries(r).map(([k,v])=>'<tr><th>'+esc(k)+'</th><td>'+esc(typeof v==='object'?JSON.stringify(v):v)+'</td></tr>').join('')+'</tbody></table></div>').join(''):'<p class="subtle">No operational records are displayed. The diagram is based on source code and SQL definitions only.</p>'}}
+document.querySelectorAll('[data-mode]').forEach(b=>b.onclick=()=>{mode=b.dataset.mode;$('search').value='';select(DATA.items.find(x=>x.layer===mode).id)});document.querySelectorAll('[data-pane]').forEach(b=>b.onclick=()=>{pane=b.dataset.pane;renderPane()});$('search').oninput=()=>{catalogue();document.querySelector('.inventory').open=true};$('example').onclick=()=>{$('search').value='';pane='example';select('03_subtopic.csv',true)};$('backmap').onclick=()=>document.querySelector('.map').scrollIntoView({behavior:'auto'});$('nodes').textContent=fmt(DATA.meta.nodes);$('edges').textContent=fmt(DATA.meta.edges);$('types').textContent=DATA.meta.types;select(selected);</script></body></html>
